@@ -9,15 +9,17 @@ class Dashboard extends Component {
   
     handleClick(letter) {
         
+        if ("OZTG" === letter) {
             this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"OZTG"}/>});
-       
-      }
-      handleClickas(letter) {
-        
-        
+        } else if ("ETH" === letter) {
             this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"ETH"}/>});
-        
+        }  else if ("LTC" === letter) {
+            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"LTC"}/>});
+        }else if ("BTC" === letter) {
+            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"BTC"}/>});    
+        }
       }
+      
     render() {
         return (
             <div>
@@ -55,7 +57,7 @@ class Dashboard extends Component {
                                             </div>
                                         </div>
 
-                                        <div name="ETH"onClick={() => this.handleClickas("ETH")} data-aos="fade-up" data-aos-delay="100" className="tile-parent col-xl-3">
+                                        <div name="ETH"onClick={() => this.handleClick("ETH")} data-aos="fade-up" data-aos-delay="100" className="tile-parent col-xl-3">
                                             <div className="tile">
                                                 <div className="row">
                                                     <div className="col-xl-12">
@@ -85,7 +87,7 @@ class Dashboard extends Component {
                                             </div>
                                         </div>
 
-                                        <div name="BTC"onClick={() => this.handleClickas("BTC")} data-aos="fade-up" data-aos-delay="200" className="tile-parent col-xl-3">
+                                        <div name="BTC"onClick={() => this.handleClick("BTC")} data-aos="fade-up" data-aos-delay="200" className="tile-parent col-xl-3">
                                             <div className="tile">
                                                 <div className="row">
                                                     <div className="col-xl-12">
