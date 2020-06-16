@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 class Currencydata extends Component {
-    state = {  }
+   
     render() { 
         return ( 
-            <div data-aos="fade-left" className="tile">
+            <div data-aos="fade-left" data-aos-duration="3000" className="tile">
     {/* <!-- transactions and wallets --> */}
     <div className="row">
         <div className="col-xl-12">

@@ -43,6 +43,7 @@ class main extends Component {
         }
     }
     render() {
+        document.body.style.background='';
         return (<div>
             {/*  <!-- navbar --> */}
             <nav className="main-nav">
@@ -52,7 +53,7 @@ class main extends Component {
                         <a className="side-nav-link" href="#"><img src="../assets/images/exported/nav_icons/logo.svg" alt="home" /></a>
                     </li>
                     <li className="side-nav-item">
-                        <a  className="side-nav-link" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
+                        <a className="side-nav-link" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
                             alt="dashboard" /></a>
                     </li>
                     <li className="side-nav-item">

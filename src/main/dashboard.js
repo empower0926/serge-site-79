@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import CurrencyData from '../models/currency_data'
+import CurrencyChart from '../models/currency_chart'
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-    this.state = { value: <CurrencyData /> }
+    this.state = { data: <CurrencyData /> ,chart:<CurrencyChart title={"OZTG"}/> }
     }
-
-    handledivChange = (event) => {
-alert(event.target.name);
-
-        if ("OZTG" === event.target.name) {
-            this.setState({ value: <CurrencyData/> });
-           
-        } else if ("ETH" === event.target.name) {
-            this.setState({ value: <CurrencyData/> });
-        }  else if ("LTC" === event.target.name) {
-            this.setState({ value: <CurrencyData/> });
-        }else if ("BTC" === event.target.name) {
-            this.setState({ value: <CurrencyData/> });
-        }
-
-    }
+  
+    handleClick(letter) {
+        
+            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"OZTG"}/>});
+       
+      }
+      handleClickas(letter) {
+        
+        
+            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"ETH"}/>});
+        
+      }
     render() {
         return (
             <div>
@@ -32,7 +29,7 @@ alert(event.target.name);
                             <div className="row">
                                 {/*  <!-- current balance --> */}
                                 <div className="tile-parent col-xl-4">
-                                {this.state.value}
+                                {this.state.data}
                                     </div>
 
                                 {/*  <!-- stats --> */}
@@ -41,13 +38,13 @@ alert(event.target.name);
 
                                     {/*  <!-- currency --> */}
                                     <div className="row">
-
-                                        <div name="OZTG" onClick={this.handledivChange} data-aos="fade-up" data-aos-delay="50" className="tile-parent col-xl-3">
-                                            <div  className="tile">
+                                    
+                                        <div name="OZTG" onClick={() => this.handleClick("OZTG")}  data-aos="fade-up" data-aos-delay="50" className="tile-parent col-xl-3">
+                                            <div  className="tile" >
                                                 <div className="row">
                                                     <div className="col-xl-12">
                                                         <span id="c-name" className="c-name">OZTG</span>
-                                                        <span className="c-badge"><img name="OZTG" onClick={this.handledivChange}  src="../assets/images/exported/currencies/OZTG.svg"
+                                                        <span className="c-badge"><img   src="../assets/images/exported/currencies/OZTG.svg"
                                                             alt="OZTG" /></span>
                                                     </div>
                                                     <div className="col-xl-12 mt-3">
@@ -58,7 +55,7 @@ alert(event.target.name);
                                             </div>
                                         </div>
 
-                                        <div name="ETH" onClick={this.handledivChange} data-aos="fade-up" data-aos-delay="100" className="tile-parent col-xl-3">
+                                        <div name="ETH"onClick={() => this.handleClickas("ETH")} data-aos="fade-up" data-aos-delay="100" className="tile-parent col-xl-3">
                                             <div className="tile">
                                                 <div className="row">
                                                     <div className="col-xl-12">
@@ -73,7 +70,7 @@ alert(event.target.name);
                                             </div>
                                         </div>
 
-                                        <div name="LTC" onClick={this.handledivChange} data-aos="fade-up" data-aos-delay="150" className="tile-parent col-xl-3">
+                                        <div name="LTC"onClick={() => this.handleClick("LTC")} data-aos="fade-up" data-aos-delay="150" className="tile-parent col-xl-3">
                                             <div className="tile">
                                                 <div className="row">
                                                     <div className="col-xl-12">
@@ -88,7 +85,7 @@ alert(event.target.name);
                                             </div>
                                         </div>
 
-                                        <div name="BTC" onClick={this.handledivChange} data-aos="fade-up" data-aos-delay="200" className="tile-parent col-xl-3">
+                                        <div name="BTC"onClick={() => this.handleClickas("BTC")} data-aos="fade-up" data-aos-delay="200" className="tile-parent col-xl-3">
                                             <div className="tile">
                                                 <div className="row">
                                                     <div className="col-xl-12">
@@ -177,28 +174,7 @@ alert(event.target.name);
                             {/* <!-- third line --> */}
                             <div className="row">
                                 <div data-aos="fade-up" data-aos-delay="350" className="tile-parent col-xl-8">
-                                    <div className="tile">
-                                        <div className="row">
-                                            <div className="tile-nav col-xl-12 chart-nav">
-                                                <div>
-                                                    <span className="heading">OZTG Chart</span>
-                                                </div>
-                                                <div className="times">
-                                                    <span className="time-select">1m</span>
-                                                    <span className="time-select">6m</span>
-                                                    <span className="time-select">1y</span>
-                                                    <span className="time-select">all</span>
-                                                </div>
-                                            </div>
-
-                                            {/* <!-- chart --> */}
-                                            <div className="col-xl-12">
-                                                <div className="chart d-flex justify-content-center mt-5">
-                                                    {/* <!-- put your chart here --> */}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                {this.state.chart}
                                 </div>
 
                                 <div data-aos="fade-up" data-aos-delay="400" className="tile-parent col-xl-4">
@@ -386,5 +362,5 @@ alert(event.target.name);
         );
     }
 }
-
+const charttitle="hi";
 export default Dashboard;

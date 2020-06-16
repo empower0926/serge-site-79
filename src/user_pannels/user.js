@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Login from './login'
 import Register from './register'
+import '../user_pannels/login.css';
+
 class User extends Component {
     
     constructor(props) {
@@ -16,6 +18,7 @@ class User extends Component {
        
     }
     render() { 
+       
         return ( 
             <div>
           {/*  <!-- nav -->  */}
