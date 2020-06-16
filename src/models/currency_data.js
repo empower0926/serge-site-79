@@ -3,7 +3,7 @@ class Currencydata extends Component {
    
     render() { 
         return ( 
-            <div data-aos="fade-left" data-aos-duration="3000" className="tile">
+            <div data-aos="fade-left"  className="tile">
     {/* <!-- transactions and wallets --> */}
     <div className="row">
         <div className="col-xl-12">

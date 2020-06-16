@@ -5,7 +5,7 @@ import WalletOverview from './walletOverview'
 import Wallets from './wallets'
 import Markets from './markets'
 import WallertAddCard from '../models/wallet_add_card'
-import {Link} from 'react-router-dom'
+
 
 
 class main extends Component {
@@ -114,8 +114,8 @@ class main extends Component {
                                 <span class="nav-link username-text username" href="#">Serge Lobréau</span>
                             </li>
                             <li class="nav-item">
-                                <Link to="/Signin" class="nav-link ml-5 logout-img" href="#"><img src="../assets/images/exported/log-out.svg"/></Link>
-                                <Link to="/Signin" class="nav-link logout-text" href="#">log out</Link>
+                                <a class="nav-link ml-5 logout-img" href="#"><img src="../assets/images/exported/log-out.svg"/></a>
+                                <span class="nav-link logout-text" href="#">log out</span>
                             </li>
                         </ul>
                     </div>

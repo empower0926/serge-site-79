@@ -3,7 +3,7 @@ class CurrencyChart extends Component {
     state = {  }
     render() { 
         return ( 
-            <div className="tile" data-aos="fade-left" data-aos-duration="3000">
+            <div className="tile" data-aos="fade-left" >
             <div className="row">
                 <div className="tile-nav col-xl-12 chart-nav">
                     <div>
