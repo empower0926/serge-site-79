@@ -1,0 +1,24 @@
+body{
+    background-color: var(--main-black);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+main{
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--main-black);
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 25px;
+    background: var(--main-color);
+}

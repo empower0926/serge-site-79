@@ -1,0 +1,534 @@
+body {
+    font-family: 'Heebo';
+    font-size: 12px;
+}
+
+button{
+    border: none;
+}
+
+.navbar-brand img{
+    width: 28px !important;
+}
+
+.navbar-toggler-icon{
+    background: url(../images/exported/Menu.svg) no-repeat !important;
+}
+
+.navbar-toggler:focus{
+    outline: none !important;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.pannel-heading{
+    font-family: Heebo-Thin;
+}
+
+.support, .profile-btn {
+    border: none;
+    padding: 0 !important;
+    margin: 0 0.5rem !important;
+    background: none;
+}
+
+.support, .profile-btn, .username-text, .username-link, .logout-img{
+    display: none;
+}
+
+a:hover{
+    transform: scale(1.1) !important;
+    transition: 0.3s !important;
+}
+
+.support-text, .profile-text, .logout-text{
+    display: block;
+}
+
+.support{
+    margin-top: 0;
+    color: white;
+    border-radius: 3px;
+    padding: 0.5rem 1rem !important;
+    background-color: var(--main-color);
+}
+
+
+.support span{
+    vertical-align: middle;
+}
+
+.support img{
+    margin: 0 0.5rem;
+}
+
+.username-link{
+    padding-top: 0.3rem !important;
+    padding-bottom: 0 !important;
+}
+
+.username {
+    font-size: 1.1rem;
+}
+
+.username::before {
+    content: 'Hello ';
+}
+
+
+.logout{
+    border: none;
+    background: none;
+    height: 35px;
+    width: 35px;
+    margin-left: 5rem;
+}
+
+.tile-parent{
+    display: grid;
+}
+
+.tile {
+    position: relative;
+    background-color: var(--nav-black);
+    border-radius: 3px;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.heading {
+    font-size: 16px;
+}
+
+.tile:hover {
+    transition: .3s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .8);
+}
+
+
+/* Dashboard ------------------------------------ */
+
+.no-of-wallets {
+    font-size: 2rem;
+    width: 4rem;
+    float: right;
+    border-radius: 2px;
+    text-align: center;
+    background-color: var(--block);
+}
+
+.no-of-wallets::after {
+    content: 'Wallets';
+    font-size: 1rem;
+    display: block;
+}
+
+.transactions {
+    font-size: 2rem;
+}
+
+.transactions::after {
+    content: 'Transactions';
+    font-size: 1rem;
+    position: absolute;
+    display: block;
+}
+
+.current-balance {
+    font-size: 2.5rem;
+}
+
+.current-balance::before {
+    font-size: 1rem;
+    content: 'Current balance';
+    display: block;
+}
+
+.current-balance::after {
+    font-size: 1rem;
+    content: 'USD';
+    vertical-align: top;
+}
+
+.percentage {
+    color: var(--main-color);
+}
+
+.percentage::after {
+    content: '%';
+}
+
+.outile-btn {
+    background: none;
+    border: 1px solid var(--main-color);
+    color: white;
+    margin-top: 1rem;
+    border-radius: 25px;
+    padding: 0 1rem;
+}
+
+.outile-btn:hover {
+    transition: 0.3s;
+    background-color: var(--main-color);
+}
+
+.outile-btn:focus {
+    outline: none;
+}
+
+.availability {
+    display: flex;
+    flex-direction: row;
+}
+
+.availability div {
+    margin: 0 1rem;
+}
+
+.more {
+    margin-left: auto;
+}
+
+.more img {
+    padding: 0 0.5rem;
+}
+
+.stat-value::after {
+    content: '%';
+}
+
+.c-name {
+    font-size: 1rem;
+}
+
+.c-value {
+    font-size: 1.2rem;
+}
+
+.c-badge {
+    font-size: 1rem;
+    float: right;
+}
+
+.c-badge img {
+    width: 1.5rem;
+}
+
+.send {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.send input {
+    padding: 0 1rem;
+}
+
+.send #amount {
+    width: inherit;
+}
+
+.send input:focus {
+    outline: none;
+}
+
+.send-to {
+    padding-left: 2rem !important;
+}
+
+.send input, .send select {
+    border: none;
+    border-radius: 2px;
+}
+
+.send span {
+    margin-right: 0;
+    padding-top: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.send * {
+    margin: 0 0.8rem;
+}
+
+.tile-nav {
+    display: flex;
+}
+
+.times {
+    margin-left: auto;
+}
+
+.time-select {
+    padding: 0 0.5rem;
+    border-radius: 25px;
+}
+
+.time-select:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: var(--main-color);
+}
+
+.chart {
+    background: url(../images/exported/mocks/Group\ 3.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    height: 300px;
+}
+
+.mini-chart {
+    background: url(../images/exported/mocks/Path\ 2.svg) no-repeat;
+    background-size: contain;
+    width: 5rem;
+    margin-left: 1rem;
+    height: 30px;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.market {
+    padding: 0 1rem;
+}
+
+.market::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0.5em 0;
+    background-color: #707070;
+}
+
+.convert::before {
+    content: 'DASH/EUR';
+    display: block;
+    font-size: 0.5rem;
+    color: #707070;
+}
+
+.convert::after {
+    content: '1.93%';
+    vertical-align: top;
+    margin-left: 0.5rem;
+    color: #707070;
+}
+
+.convert-value {
+    font-family: Heebo-medium;
+}
+
+.convert-value::after {
+    content: 'EUR';
+    font-family: Heebo-regular;
+    margin-left: 1rem;
+}
+
+.transaction {
+    background-color: var(--block);
+    border-radius: 2px;
+    padding: 1.5rem 0.5rem;
+}
+
+.blue-block{
+    background-color: var(--block);
+    border-radius: 2px;
+    padding: 0.5rem;
+}
+
+.transaction-code{
+    font-size: 10px;
+}
+
+.news-date {
+    color: #707070;
+}
+
+
+/* Wallet ------------------------------------ */
+
+
+.currency-name{
+    margin-left: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5rem;
+}
+
+.currency-value{
+    font-size: 1.5rem;
+}
+
+.wallet-chart{
+    width: 100%;
+}
+
+.currency-value::before{
+    color: #707070;
+    font-size: 0.8rem;
+    text-align: end;
+    content: 'BTC';
+    display: block;
+}
+
+.add-tile{
+    margin-top: 2rem;
+    border-radius: 3px;
+    border: 1px solid var(--block);
+    color: var(--block);
+}
+
+.add-tile:hover{
+    cursor: pointer;
+    background-color: var(--block);
+}
+
+.total::after{
+    font-size: 1rem;
+    content: 'OZTG';
+    margin-left: 1rem;
+    vertical-align: top;
+    color: #707070;
+}
+
+.total{
+    font-size: 3rem;
+}
+
+.total::before{
+    font-size: 1rem;
+    display: block;
+    content: 'Total balance:';
+}
+
+.ham{
+    background: none;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    display: flex;
+    height: 35px;
+}
+
+.ham img{
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.chart-name::after{
+    content: 'OZTG/USD';
+    color: #707070;
+    display: block;
+    font-size: 0.8rem;
+}
+
+.sr{
+    width: 100%;
+}
+
+.sr-send{
+    border: 1px solid white;
+}
+
+.qr{
+    width: 100%;
+}
+
+.transaction-mode:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.chart-value{
+    font-size: 1.5rem;
+}
+
+.chart-value::before{
+        content: '-1.14%';
+        font-size: 0.8rem;
+        color: red;
+        margin-right: 1rem;
+        vertical-align: middle;
+}
+
+.chart-value::after{
+    content: 'USD';
+    font-family: Heebo-Thin;
+    margin-left: 1rem;
+}
+
+.back-btn{
+    padding: 0.5rem 1.5rem;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 3px;
+}
+
+.coin-img{
+    width: 40px;
+}
+
+.wallet-intro span{
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+
+.wallet-name{
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.header-name{
+    font-size: 2rem;
+}
+
+
+
+
+/* Markets ----------------------------------- */
+
+.market-name{
+    color: #707070;
+    font-family: Heebo-medium;
+}
+
+.market-value{
+    font-size: 1.5rem;
+}
+
+.market-chart{
+    width: 100%;
+}
+
+.rate{
+    color: #7AC231;
+}
+
+.rate::after{
+    content: '%';
+}
+
+
+
+/* Trading --------------------------------- */
+
+.order-book-btn{
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+.trade-decimal{
+    color: #7AC231;
+}
+
+.trade-value{
+    color: #707070;
+}
+
+.trade-tot{
+    font-size: 1.5rem;
+}

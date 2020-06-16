@@ -1,0 +1,75 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .socials {
+        justify-content: center;
+    }
+    .terms-buttons {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .navbar-brand{
+        display: block;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .socials {
+        justify-content: left;
+    }
+    .terms-buttons {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .navbar-brand{
+        display: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .socials {
+        justify-content: left;
+    }
+    .terms-buttons {
+        margin-top: o;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    .support, .profile-btn, .username-text, .username-link, .logout-img{
+        display: block !important;
+    }
+    
+    .support-text, .profile-text, .logout-text{
+        display: none !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .socials {
+        justify-content: left;
+    }
+    .terms-buttons {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    .support, .profile-btn, .username-text, .username-link, .logout-img{
+        display: block !important;
+    }
+    
+    .support-text, .profile-text, .logout-text{
+        display: none !important;
+    }
+    
+    
+}

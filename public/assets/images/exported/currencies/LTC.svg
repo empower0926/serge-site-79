@@ -1,0 +1,7 @@
+<svg id="Group_3" data-name="Group 3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="Rectangle_3" data-name="Rectangle 3" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1">
+    <rect width="35" height="35" rx="2" stroke="none"/>
+    <rect x="0.5" y="0.5" width="34" height="34" rx="1.5" fill="none"/>
+  </g>
+  <path id="Shape" d="M1.561,12.265,0,12.871.752,9.854l1.579-.634L4.608,0h5.61L8.556,6.777,10.1,6.152,9.355,9.16l-1.561.625-.928,3.81h8.446L14.358,17.5H.276Z" transform="translate(9.844 8.75)" fill="#fff"/>
+</svg>
