@@ -4,6 +4,8 @@ import Trading from './trading'
 import WalletOverview from './walletOverview'
 import Wallets from './wallets'
 import Markets from './markets'
+import Calculator from './calculator'
+import Transactions from './transactions'
 import WallertAddCard from '../models/wallet_add_card'
 
 
@@ -40,7 +42,14 @@ class main extends Component {
         }  else if ("wallets" === event.target.name) {
             this.setState({ value:<div> <Wallets update={this.ChangefromWalletOverview} /> <WallertAddCard/></div>});
             this.setState({ heading:"Wallets" });
+        }else if("calculator" === event.target.name) {
+            this.setState({ value: <Calculator/> });
+            this.setState({ heading:"Calculator" });
+        }else if("transaction" === event.target.name) {
+            this.setState({ value: <Transactions/> });
+            this.setState({ heading:"Transaction" });
         }
+        
     }
     render() {
         document.body.style.background='';
@@ -73,7 +82,7 @@ class main extends Component {
                             alt="transaction" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <button  className="side-nav-link" href="/" name="walletOverview" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
+                    <button  className="side-nav-link" href="/" name="calculator" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
                             alt="calculator" /></button>
                     </li>
                     <li className="side-nav-item">

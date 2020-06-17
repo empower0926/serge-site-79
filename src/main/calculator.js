@@ -1,6 +1,28 @@
 import React, { Component } from 'react';
+import Currencyblock from '../models/currency_block'
+
 class Calculator extends Component {
-    state = {  }
+  
+    constructor(props) {
+        super(props);
+        this.state = { inputvalue: 0,
+        from: "BTC",
+        to: "BTC",
+        output: 0}
+    }
+    handleButton(number) {
+        this.setState({ inputvalue: this.state.inputvalue+ number});
+    }
+    handlefrom= (event) => {
+        this.setState({ from: event.target.value });
+            }
+    handleto= (event) => {
+        this.setState({ to: event.target.value });
+            }
+     showResult(){
+        this.setState({ output: this.state.inputvalue});
+            }
+
     render() { 
         return ( 
             <div class="container-fluid">
@@ -11,7 +33,7 @@ class Calculator extends Component {
             <div class="row">
                 <div class="col-xl-4 p-0 mt-2">
                     <div class="blue-text">FROM</div>
-                    <select name="from-currency" id="from-currency" class="currency-select">
+                    <select onChange={this.handlefrom} name="from-currency" id="from-currency" class="currency-select">
                         <option value="BTC">Bitcoin (BTC)</option>
                         <option value="LTC">Litecoin (LTC)</option>
                         <option value="OZTG">OZTG</option>
@@ -23,7 +45,7 @@ class Calculator extends Component {
                 </div>
                 <div class="col-xl-4 p-0 mt-2">
                     <div class="blue-text">TO</div>
-                    <select name="to-currency" id="to-currency" class="currency-select">
+                    <select onChange={this.handleto}  name="to-currency" id="to-currency" class="currency-select">
                         <option value="BTC">Bitcoin (BTC)</option>
                         <option value="LTC">Litecoin (LTC)</option>
                         <option value="OZTG">OZTG</option>
@@ -38,88 +60,88 @@ class Calculator extends Component {
             </div>
             <div class="row">
                 <div class="d-flex cal-input">
-                    <input type="text"/>
-                    <button class="cal-ok"><img src="../assets/images/exported/cal-ok.svg" alt=""/></button>
+                    <input type="text" value={this.state.inputvalue}/>
+                    <button onClick={() => this.showResult()}class="cal-ok"><img src="../assets/images/exported/cal-ok.svg" alt=""/></button>
                 </div>
             </div>
 
            {/*  <!-- numbers --> */}
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton(7)}  class="blue-block d-flex justify-content-center">
                         <button class="cal-btn">7</button>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">8</button>
+                    <div  onClick={() => this.handleButton(8)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">8</button>
                     </div>
                 </div>
 
                 <div class="col p-0">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">9</button>
+                    <div onClick={() => this.handleButton(9)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">9</button>
                     </div>
                 </div>
             </div>
 
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">4</button>
+                    <div onClick={() => this.handleButton(4)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">4</button>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">5</button>
+                    <div onClick={() => this.handleButton(5)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">5</button>
                     </div>
                 </div>
 
                 <div class="col p-0">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">6</button>
+                    <div onClick={() => this.handleButton(6)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">6</button>
                     </div>
                 </div>
             </div>
 
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">1</button>
+                    <div onClick={() => this.handleButton(1)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">1</button>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">2</button>
+                    <div onClick={() => this.handleButton(2)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">2</button>
                     </div>
                 </div>
 
                 <div class="col p-0">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">3</button>
+                    <div onClick={() => this.handleButton(3)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">3</button>
                     </div>
                 </div>
             </div>
 
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">0</button>
+                    <div onClick={() => this.handleButton(0)} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">0</button>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="blue-block d-flex justify-content-center">
-                        <button class="cal-btn">.</button>
+                    <div onClick={() => this.handleButton('.')} class="blue-block d-flex justify-content-center">
+                        <button  class="cal-btn">.</button>
                     </div>
                 </div>
 
                 <div class="col p-0">
-                    <div class="blue-block cal-cancel d-flex justify-content-center">
-                        <button class="cal-btn">C</button>
+                    <div onClick={() => this.handleButton('clear')} class="blue-block cal-cancel d-flex justify-content-center">
+                        <button  class="cal-btn">C</button>
                     </div>
                 </div>
             </div>
@@ -131,8 +153,8 @@ class Calculator extends Component {
                     <div class="cal-output">
                         {/* <!-- show results here --> */}
                         <div class="row d-flex">
-                            <div class="col-xl-6 d-flex justify-content-center">0.3333333333333</div>
-                            <div class="col-xl-6 d-flex justify-content-center currency-rate">BTC = 3748.76 USD
+                            <div class="col-xl-6 d-flex justify-content-center">{this.state.output}</div>
+                            <div class="col-xl-6 d-flex justify-content-center currency-rate">{this.state.from}= 3748.76 {this.state.to}
                             </div>
                         </div>
                     </div>
@@ -149,138 +171,13 @@ class Calculator extends Component {
             <div class="row">
                 {/* <!-- currency blocks show here --> */}
 
-                {/* <!-- currency block --> */}
-                <div class="col-xl-6 mt-3">
-                    <div class="currency-block p-3">
-                        <div class="row">
-                            <div class="col-xl-12 d-flex">
-                                <span class="currency-name">Bitcoin</span>
-                                <img class="ml-auto" src="../assets/images/exported/currencies/BTC.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2">
-                                <img class="w-100" src="../assets/images/exported/mocks/red-graph.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2 d-flex">
-                                <span class="current-percentage mt-4 align-self-center">-179.87</span>
-                                <span class="currency-usd ml-auto">11 329.2</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- currency block --> */}
-                <div class="col-xl-6 mt-3">
-                    <div class="currency-block p-3">
-                        <div class="row">
-                            <div class="col-xl-12 d-flex">
-                                <span class="currency-name">Bitcoin</span>
-                                <img class="ml-auto" src="../assets/images/exported/currencies/BTC.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2">
-                                <img class="w-100" src="../assets/images/exported/mocks/red-graph.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2 d-flex">
-                                <span class="current-percentage mt-4 align-self-center">-179.87</span>
-                                <span class="currency-usd ml-auto">11 329.2</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- currency block --> */}
-                <div class="col-xl-6 mt-4">
-                    <div class="currency-block p-3">
-                        <div class="row">
-                            <div class="col-xl-12 d-flex">
-                                <span class="currency-name">Bitcoin</span>
-                                <img class="ml-auto" src="../assets/images/exported/currencies/BTC.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2">
-                                <img class="w-100" src="../assets/images/exported/mocks/red-graph.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2 d-flex">
-                                <span class="current-percentage mt-4 align-self-center">-179.87</span>
-                                <span class="currency-usd ml-auto">11 329.2</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- currency block --> */}
-                <div class="col-xl-6 mt-4">
-                    <div class="currency-block p-3">
-                        <div class="row">
-                            <div class="col-xl-12 d-flex">
-                                <span class="currency-name">Bitcoin</span>
-                                <img class="ml-auto" src="../assets/images/exported/currencies/BTC.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2">
-                                <img class="w-100" src="../assets/images/exported/mocks/red-graph.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2 d-flex">
-                                <span class="current-percentage mt-4 align-self-center">-179.87</span>
-                                <span class="currency-usd ml-auto">11 329.2</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- currency block --> */}
-                <div class="col-xl-6 mt-4">
-                    <div class="currency-block p-3">
-                        <div class="row">
-                            <div class="col-xl-12 d-flex">
-                                <span class="currency-name">Bitcoin</span>
-                                <img class="ml-auto" src="../assets/images/exported/currencies/BTC.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2">
-                                <img class="w-100" src="../assets/images/exported/mocks/red-graph.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2 d-flex">
-                                <span class="current-percentage mt-4 align-self-center">-179.87</span>
-                                <span class="currency-usd ml-auto">11 329.2</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- currency block --> */}
-                <div class="col-xl-6 mt-4">
-                    <div class="currency-block p-3">
-                        <div class="row">
-                            <div class="col-xl-12 d-flex">
-                                <span class="currency-name">Bitcoin</span>
-                                <img class="ml-auto" src="../assets/images/exported/currencies/BTC.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2">
-                                <img class="w-100" src="../assets/images/exported/mocks/red-graph.svg" alt=""/>
-                            </div>
-
-                            <div class="col-xl-12 mt-2 d-flex">
-                                <span class="current-percentage mt-4 align-self-center">-179.87</span>
-                                <span class="currency-usd ml-auto">11 329.2</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
+                <Currencyblock/>
+                <Currencyblock/>
+                <Currencyblock/>
+                <Currencyblock/>
+                <Currencyblock/>
+                <Currencyblock/>
+              
             </div>
         </div>
     </div>
