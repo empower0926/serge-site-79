@@ -65,7 +65,9 @@ class main extends Component {
     getData(){
         let data=sessionStorage.getItem('mydata');
         data = JSON.parse(data);
-        let val=data.heading;
+        let val=null
+        if(data!==null){
+        val=data.heading;}
         return val;
     }
 
