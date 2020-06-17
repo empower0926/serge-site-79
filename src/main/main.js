@@ -40,7 +40,7 @@ class main extends Component {
         }  else if ("wallets" === event.target.name) {
             this.setState({ value:<div> <Wallets update={this.ChangefromWalletOverview} /> <WallertAddCard/></div>});
             this.setState({ heading:"Wallets" });
-        }  
+        }
     }
     render() {
         document.body.style.background='';
