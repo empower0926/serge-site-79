@@ -50,39 +50,39 @@ class main extends Component {
 
                 <ul className="main-nav-ul">
                     <li className="side-nav-item nav-home">
-                        <a className="side-nav-link" href="/"><img src="../assets/images/exported/nav_icons/logo.svg" alt="home" /></a>
+                        <button className="side-nav-link" href="/"><img src="../assets/images/exported/nav_icons/logo.svg" alt="home" /></button>
                     </li>
                     <li className="side-nav-item">
-                        <a className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
-                            alt="dashboard" /></a>
+                        <button className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
+                            alt="dashboard" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <a className="side-nav-link" href="/" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
-                            alt="wallets" /></a>
+                    <button className="side-nav-link" href="/" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
+                            alt="wallets" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" href="/" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
-                            alt="markets" /></a>
+                    <button  className="side-nav-link" href="/" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
+                            alt="markets" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <a className="side-nav-link" href="/" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
-                            alt="blockchain" /></a>
+                    <button className="side-nav-link" href="/" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
+                            alt="blockchain" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" href="/" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
-                            alt="transaction" /></a>
+                    <button  className="side-nav-link" href="/" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
+                            alt="transaction" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" href="/" name="walletOverview" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
-                            alt="calculator" /></a>
+                    <button  className="side-nav-link" href="/" name="walletOverview" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
+                            alt="calculator" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" href="/" name="crypto news" onClick={this.handledivChange}><img name="crypto news" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
-                            alt="crypto news" /></a>
+                    <button  className="side-nav-link" href="/" name="crypto news" onClick={this.handledivChange}><img name="crypto news" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
+                            alt="crypto news" /></button>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" href="/" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
-                            alt="settings" /></a>
+                    <button  className="side-nav-link" href="/" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
+                            alt="settings" /></button>
                     </li>
                 </ul>
             </nav>
