@@ -4,6 +4,14 @@
     z-index: 999 !important;
 }
 
+.nav-home{
+    display: grid;
+}
+
+.navbar-toggler{
+    padding: 0;
+}
+
 .main-nav-ul {
     list-style: none;
     padding: 0;
@@ -21,7 +29,8 @@
 .side-nav-link {
     background: none;
     justify-content: center;
-    padding: 1.25rem;
+    padding: 1.25rem 0;
+    width: 5rem;
     z-index: 9999 !important;
 }
 
@@ -69,7 +78,7 @@
         height: 100vh !important;
     }
     .nav-home {
-        margin: 2rem;
+        margin: 2rem 0;
         margin-bottom: 6rem;
         display: block;
     }

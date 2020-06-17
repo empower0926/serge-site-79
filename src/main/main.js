@@ -126,7 +126,7 @@ class main extends Component {
 
                 {/* dynamic stffs are handled here */}
                 {this.state.value}
-
+                
             </main>
 
         </div>);
