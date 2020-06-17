@@ -1,16 +1,15 @@
-
-input:focus, button {
+.settings input:focus, .settings button {
     outline: none;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+.settings input[type="text"], .settings input[type="email"], .settings input[type="password"] {
     margin-top: 20px;
     border: none;
     border-radius: 3px;
     padding: 16px 24px;
 }
 
-button, input[type="submit"] {
+.settings button, .settings input[type="submit"] {
     background-color: var(--main-color);
     color: white;
     margin-top: 20px;
@@ -20,6 +19,6 @@ button, input[type="submit"] {
     transition: .3s;
 }
 
-button:focus{
+.settings button:focus{
     outline: none !important;
 }

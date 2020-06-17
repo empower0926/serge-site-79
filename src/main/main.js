@@ -7,6 +7,7 @@ import Markets from './markets'
 import Calculator from './calculator'
 import Transactions from './transactions'
 import News from './news'
+import Profile from './profile'
 import WallertAddCard from '../models/Wallet/wallet_add_card'
 import {Link} from 'react-scroll'
 
@@ -53,14 +54,18 @@ class main extends Component {
                 value: <News/>,
                 heading:"News" 
             }
-
+    }else if("settings" === this.getData()) {
+        this.state={
+            value: <Profile/>,
+            heading:"Settings" 
         }
-    }
+
+}}
        
     }
     setData(para){
-        let obj={heading:para}
-       sessionStorage.setItem('mydata',JSON.stringify(obj))
+        let obj={heading:para};
+       sessionStorage.setItem('mydata',JSON.stringify(obj));
     }
     getData(){
         let data=sessionStorage.getItem('mydata');
@@ -109,6 +114,9 @@ class main extends Component {
         }else if("cryptonews" === event.target.name) {
             this.setState({ value: <News/> });
             this.setState({ heading:"News" });
+        }else if("settings" === event.target.name) {
+            this.setState({ value: <Profile/> });
+            this.setState({ heading:"Settings" });
         }
 
         
