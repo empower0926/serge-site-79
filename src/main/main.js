@@ -6,20 +6,19 @@ import Wallets from './wallets'
 import Markets from './markets'
 import Calculator from './calculator'
 import Transactions from './transactions'
+import News from './news'
 import WallertAddCard from '../models/Wallet/wallet_add_card'
 import {Link} from 'react-scroll'
 
 
 class main extends Component {
-    state={
-        value: <Dashboard /> ,
-            heading:"Dashboard"
-    }
+    
     constructor(props) {
-        alert(page);
-        
         super(props);
-        
+        this.state={
+            value: <Dashboard /> ,
+                heading:"Dashboard"
+        }
     }
     
     ChangefromWalletOverview = () => {
@@ -39,7 +38,7 @@ class main extends Component {
 
     }
     handledivChange = (event) => {
-        const page="buy";
+        
         if ("dashboard" === event.target.name) {
             this.setState({ value: <Dashboard /> });
             this.setState({ heading:"Dashboard" });
@@ -55,8 +54,12 @@ class main extends Component {
         }else if("transaction" === event.target.name) {
             this.setState({ value: <Transactions/> });
             this.setState({ heading:"Transaction" });
+        }else if("cryptonews" === event.target.name) {
+            this.setState({ value: <News/> });
+            this.setState({ heading:"News" });
         }
-        alert(page);
+
+        
     }
     render() {
         document.body.style.background='';
@@ -93,7 +96,7 @@ class main extends Component {
                             alt="calculator" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="crypto news" onClick={this.handledivChange}><img name="crypto news" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
+                    <Link to="navbar-brand" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="cryptonews" onClick={this.handledivChange}><img name="cryptonews" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
                             alt="crypto news" /></button></Link>
                     </li>
                     <li className="side-nav-item">
@@ -148,5 +151,5 @@ class main extends Component {
         </div>);
     }
 }
-const page="hi";
+
 export default main;
