@@ -113,7 +113,7 @@ class Dashboard extends Component {
                                                     <div><img src="../assets/images//exported/mocks/Group 1.svg" alt="" /></div>
                                                     <div className="stat-item stat-value">81</div>
                                                     <div className="stat-item">OZTG</div>
-                                                    <a className="more" href="#">
+                                                    <a className="more" href="/">
                                                         <img src="../assets/images/exported/3-dot.svg" alt="more" />
                                                     </a>
                                                 </div>
@@ -123,7 +123,7 @@ class Dashboard extends Component {
                                                     <div><img src="../assets/images//exported/mocks/Group 1.svg" alt="" /></div>
                                                     <div className="stat-item stat-value">81</div>
                                                     <div className="stat-item">OZTG</div>
-                                                    <a className="more" href="#">
+                                                    <a className="more" href="/">
                                                         <img src="../assets/images/exported/3-dot.svg" alt="more" />
                                                     </a>
                                                 </div>
@@ -134,7 +134,7 @@ class Dashboard extends Component {
                                                     <div><img src="../assets/images//exported/mocks/Group 1.svg" alt="" /></div>
                                                     <div className="stat-item stat-value">81</div>
                                                     <div className="stat-item">OZTG</div>
-                                                    <a className="more" href="#">
+                                                    <a className="more" href="/">
                                                         <img src="../assets/images/exported/3-dot.svg" alt="more" />
                                                     </a>
                                                 </div>
@@ -364,5 +364,4 @@ class Dashboard extends Component {
         );
     }
 }
-const charttitle="hi";
 export default Dashboard;

@@ -50,38 +50,38 @@ class main extends Component {
 
                 <ul className="main-nav-ul">
                     <li className="side-nav-item nav-home">
-                        <a className="side-nav-link" href="#"><img src="../assets/images/exported/nav_icons/logo.svg" alt="home" /></a>
+                        <a className="side-nav-link" href="/"><img src="../assets/images/exported/nav_icons/logo.svg" alt="home" /></a>
                     </li>
                     <li className="side-nav-item">
-                        <a className="side-nav-link" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
+                        <a className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
                             alt="dashboard" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a className="side-nav-link" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
+                    <a className="side-nav-link" href="/" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
                             alt="wallets" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
+                    <a  className="side-nav-link" href="/" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
                             alt="markets" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a className="side-nav-link" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
+                    <a className="side-nav-link" href="/" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
                             alt="blockchain" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
+                    <a  className="side-nav-link" href="/" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
                             alt="transaction" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" name="walletOverview" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
+                    <a  className="side-nav-link" href="/" name="walletOverview" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
                             alt="calculator" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" name="crypto news" onClick={this.handledivChange}><img name="crypto news" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
+                    <a  className="side-nav-link" href="/" name="crypto news" onClick={this.handledivChange}><img name="crypto news" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
                             alt="crypto news" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a  className="side-nav-link" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
+                    <a  className="side-nav-link" href="/" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
                             alt="settings" /></a>
                     </li>
                 </ul>
@@ -92,30 +92,30 @@ class main extends Component {
             <main id="root">
 
                 {/* top nav */}
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">
-                        <img src="../assets/images/exported/nav_icons/logo.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""/>
+                <nav className="navbar navbar-expand-lg navbar-light">
+                    <a className="navbar-brand" href="/">
+                        <img src="../assets/images/exported/nav_icons/logo.svg" className="img-fluid" alt=""/>
                     </a>
-                    <h3 class="pannel-heading mx-auto" data-aos="zoom-in" > {this.state.heading}</h3>
-                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <h3 className="pannel-heading mx-auto" data-aos="zoom-in" > {this.state.heading}</h3>
+                    <button className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link support" href="#"><img class="support-btn" src="../assets/images/exported/support.svg"/>Support</a>
-                                <a class="nav-link support-text" href="#">Support</a>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <a className="nav-link support" href="/"><img className="support-btn" src="../assets/images/exported/support.svg" alt=""/>Support</a>
+                                <a className="nav-link support-text" href="/">Support</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link profile-btn" href="#"><img class="profile-img" src="../assets/images/exported/Avatar.svg"/></a>
-                                <a class="nav-link profile-text" href="#">my profile</a>
+                            <li className="nav-item">
+                                <a className="nav-link profile-btn" href="/"><img className="profile-img" src="../assets/images/exported/Avatar.svg" alt=""/></a>
+                                <a className="nav-link profile-text" href="/">my profile</a>
                             </li>
-                            <li class="nav-item">
-                                <span class="nav-link username-text username" href="#">Serge Lobréau</span>
+                            <li className="nav-item">
+                                <span className="nav-link username-text username" href="/">Serge Lobréau</span>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link ml-5 logout-img" href="#"><img src="../assets/images/exported/log-out.svg"/></a>
-                                <span class="nav-link logout-text" href="#">log out</span>
+                            <li className="nav-item">
+                                <a className="nav-link ml-5 logout-img" href="/"><img src="../assets/images/exported/log-out.svg"alt=""/></a>
+                                <span className="nav-link logout-text" href="/">log out</span>
                             </li>
                         </ul>
                     </div>
