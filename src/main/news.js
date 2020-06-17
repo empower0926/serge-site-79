@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {NewsFeed_01} from '../models/News/newsfeed_01'
-import {NewsFeed_02} from '../models/News/newsfeed_02'
-import {NewsFeed_03} from '../models/News/newsfeed_03'
-import {NewsFeed_04} from '../models/News/newsfeed_04'
-import {NewsFeed_05} from '../models/News/newsfeed_05'
+import {NewsFeed_01} from '../models/News/NEWSFEED_01'
+import {NewsFeed_02} from '../models/News/NEWSFEED_02'
+import {NewsFeed_03} from '../models/News/NEWSFEED_03'
+import {NewsFeed_04} from '../models/News/NEWSFEED_04'
+import {NewsFeed_05} from '../models/News/NEWSFEED_05'
 class News extends Component {
     state = {  }
     render() { 
