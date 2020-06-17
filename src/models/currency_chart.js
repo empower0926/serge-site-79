@@ -7,7 +7,7 @@ class CurrencyChart extends Component {
             <div className="row">
                 <div className="tile-nav col-xl-12 chart-nav">
                     <div>
-                        <span className="heading">{this.props.title}</span>
+                        <span className="heading chart-heading">{this.props.title}</span>
                     </div>
                     <div className="times">
                         <span className="time-select">1m</span>

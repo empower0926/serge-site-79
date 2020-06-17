@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class Currencydata extends Component {
+class ETHTile extends Component {
 
     render() {
         return (
@@ -7,8 +7,8 @@ class Currencydata extends Component {
                 {/* <!-- transactions and wallets --> */}
                 <div className="row">
                     <div className="col-xl-12">
-                        <span id="transactions" className="transactions">2,346</span>
-                        <span id="no-of-wallets" className="no-of-wallets">5</span>
+                        <span id="transactions" className="transactions">1,446</span>
+                        <span id="no-of-wallets" className="no-of-wallets">9</span>
                     </div>
                 </div>
 
@@ -16,7 +16,7 @@ class Currencydata extends Component {
                 <div className="row mt-5">
                     <div className="col-xl-12">
                         <span id="current-balance" className="current-balance">
-                            3.4330
+                            5.4330
             </span>
                     </div>
                 </div>
@@ -36,4 +36,4 @@ class Currencydata extends Component {
     }
 }
 
-export default Currencydata;
+export default ETHTile;

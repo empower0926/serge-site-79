@@ -8,9 +8,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .navbar-brand{
-        display: block;
-    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -23,8 +20,12 @@
         margin-left: auto;
         margin-right: 0;
     }
-    .navbar-brand{
-        display: none;
+    .t-date{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .currency-rate{
+        font-size: 1.2rem;
     }
 }
 
@@ -38,15 +39,15 @@
         margin-left: auto;
         margin-right: 0;
     }
-    .navbar-brand{
-        display: none;
+    .t-date{
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
-    .support, .profile-btn, .username-text, .username-link, .logout-img{
+    .currency-rate{
+        font-size: 1.2rem;
+    }
+    .convert-img{
         display: block !important;
-    }
-    
-    .support-text, .profile-text, .logout-text{
-        display: none !important;
     }
 }
 
@@ -60,16 +61,14 @@
         margin-left: auto;
         margin-right: 0;
     }
-    .navbar-brand{
-        display: none;
+    .t-date{
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
-    .support, .profile-btn, .username-text, .username-link, .logout-img{
+    .currency-rate{
+        font-size: 1.2rem;
+    }
+    .convert-img{
         display: block !important;
     }
-    
-    .support-text, .profile-text, .logout-text{
-        display: none !important;
-    }
-    
-    
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class Currencydata extends Component {
+class OZTGTile extends Component {
 
     render() {
         return (
@@ -36,4 +36,4 @@ class Currencydata extends Component {
     }
 }
 
-export default Currencydata;
+export default OZTGTile;
