@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class Currencydata extends Component {
+class LTCTile extends Component {
 
     render() {
         return (
@@ -7,8 +7,8 @@ class Currencydata extends Component {
                 {/* <!-- transactions and wallets --> */}
                 <div className="row">
                     <div className="col-xl-12">
-                        <span id="transactions" className="transactions">2,346</span>
-                        <span id="no-of-wallets" className="no-of-wallets">5</span>
+                        <span id="transactions" className="transactions">5,246</span>
+                        <span id="no-of-wallets" className="no-of-wallets">2</span>
                     </div>
                 </div>
 
@@ -36,4 +36,4 @@ class Currencydata extends Component {
     }
 }
 
-export default Currencydata;
+export default LTCTile;

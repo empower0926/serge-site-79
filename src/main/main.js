@@ -40,7 +40,7 @@ class main extends Component {
         }  else if ("wallets" === event.target.name) {
             this.setState({ value:<div> <Wallets update={this.ChangefromWalletOverview} /> <WallertAddCard/></div>});
             this.setState({ heading:"Wallets" });
-        }
+        }  
     }
     render() {
         document.body.style.background='';
@@ -55,17 +55,13 @@ class main extends Component {
                     <li className="side-nav-item">
                         <a className="side-nav-link" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
                             alt="dashboard" /></a>
-                    </li>
-                    <li className="side-nav-item">
-                    <a className="side-nav-link" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
-                            alt="wallets" /></a>
-                    </li>
+                    </li>     
                     <li className="side-nav-item">
                     <a  className="side-nav-link" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
                             alt="markets" /></a>
                     </li>
                     <li className="side-nav-item">
-                    <a className="side-nav-link" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
+                    <a className="side-nav-link" name="blockchain" onClick={this.handledivChange}><img name="blockchain" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
                             alt="blockchain" /></a>
                     </li>
                     <li className="side-nav-item">

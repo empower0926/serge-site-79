@@ -280,6 +280,22 @@ a:hover{
     height: 300px;
 }
 
+.tile:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #070733;
+}
+
+.overview:hover{
+    transition: 0.3s;
+    background-color: var(--block);
+}
+
+
+.chart-heading::after{
+    content: ' Chart';
+}
+
 .mini-chart {
     background: url(../images/exported/mocks/Path\ 2.svg) no-repeat;
     background-size: contain;
@@ -487,6 +503,32 @@ a:hover{
 
 
 
+/* Tredings............ */
+.order-book-btn{
+    background: none;
+}
+
+.order-book-btn:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+.order-book-btn:focus{
+    outline: none;
+}
+
+.trade-decimal{
+    color: #7AC231;
+}
+
+.trade-value{
+    color: #707070;
+}
+
+.trade-tot{
+    font-size: 1.5rem;
+}
+
 
 /* Markets ----------------------------------- */
 
@@ -513,22 +555,218 @@ a:hover{
 
 
 
-/* Trading --------------------------------- */
+/* transactions ---------------------------- */
 
-.order-book-btn{
-    margin: 0;
-    padding: 0;
+.transaction-card {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+}
+
+.t-date{
+    margin-left: 0 !important;
+}
+
+.transaction-card span {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.t-value{
+    font-size: 1.2rem;
+    font-family: Heebo-medium;
+}
+
+.span-completed {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 3px;
+    width: 130px;
+    padding: 0.5rem 1rem;
+}
+
+.span-pending {
+    background-color: #F3F4F5;
+    color: #707070;
+    border-radius: 3px;
+    width: 130px;
+    padding: 0.5rem 1rem;
+}
+
+.t-count{
+    font-size: 2rem;
+    font-family: Heebo-Thin;
+}
+
+.t-count::after{
+    content: 'Transactions';
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    vertical-align: middle;
+    font-family: Heebo;
+}
+.export-history:hover{
+    transition: 0.3s;
+    background-color: var(--block);
+    color: white;
+}
+
+.arrow{
+    width: 16px;
+}
+
+.t-timestamp{
+    display: flex;
+    flex-direction: row;
+    list-style: none;   
+    margin-bottom: 0;
+}
+
+.t-timestamp li{
+    margin-left: 1rem;
+}
+
+.t-timestamp button {
     background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: white;
 }
 
-.trade-decimal{
-    color: #7AC231;
+.t-timestamp button:hover{
+    transition: .3s;
+    color: var(--main-color);
 }
 
-.trade-value{
+
+/* calculator ------------------------------------ */
+
+
+.currency-select{
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.currency-select option{
+    background-color: #06062B;
+    border: none;
+}
+
+.currency-select option{
+    transition: 0.3s;
+    outline: none;
+}
+
+.currency-select:focus{
+    outline: none;
+}
+
+.convert-img{
+    display: none;
+}
+
+.blue-text{
     color: #707070;
 }
 
-.trade-tot{
+.cal-input{
+    background: white;
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2px;
+}
+
+.cal-output {
+    background: white;
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: Heebo;
+    color: #06062B;
+    border-radius: 2px;
+}
+
+.currency-rate{
+    font-size: 1.2rem;
+}
+
+.cal-input input, .cal-input button{
+    border-radius: 0 !important;
+}
+
+.cal-input input{
+    width: inherit;
+    border: none;
+    font-size: 1rem;
+    margin: 0 !important;
+    padding: 0 !important;
+    
+}
+
+.cal-input button{
+    background: white;
+    padding: 0.2rem 1rem !important;
+    margin: 0 !important;
+    border: none;
+    border-radius: 25px !important;
+}
+
+.cal-input button img{
+    width: 24px;
+    
+}
+
+.cal-input button:hover{
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.cal-btn{
+    margin: 0 !important;
+    background: none;
     font-size: 1.5rem;
+    font-family: Heebo-Thin;
+    padding: 0 !important;
+}
+
+.calculator .blue-block:hover{
+    transition: .2s;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--block);
+}
+
+.cal-cancel{
+    background-color: var(--main-color);
+}
+
+.cal-results{
+    background-color: white;
+
+}
+
+.currency-block{
+    background-color: #06062B;
+    border-radius: 3px;
+}
+
+.current-percentage{
+    color: red;
+}
+
+.currency-usd{
+    font-size: 2rem;
+}
+
+.currency-usd::before{
+    content: 'USD';
+    text-align: end;
+    display: block;
+    font-size: 1rem;
+    color: #707070;
+    font-family: Heebo-Thin;
 }

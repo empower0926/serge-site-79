@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-class Currencydata extends Component {
+class BTCTile extends Component {
 
     render() {
         return (
-            <div data-aos="fade-left" className="tile">
+            <div data-aos="fade-left" className="tile overview">
                 {/* <!-- transactions and wallets --> */}
                 <div className="row">
                     <div className="col-xl-12">
-                        <span id="transactions" className="transactions">2,346</span>
-                        <span id="no-of-wallets" className="no-of-wallets">5</span>
+                        <span id="transactions" className="transactions">4,346</span>
+                        <span id="no-of-wallets" className="no-of-wallets">2</span>
                     </div>
                 </div>
 
@@ -24,7 +24,7 @@ class Currencydata extends Component {
                 {/* <!-- buy and sell --> */}
                 <div className="row mt-4">
                     <div className="col-xl-8 mt-5">
-                        <span id="value" className="value">2.7995 EUR</span> <span id="percentage"
+                        <span id="value" className="value">4.7495 EUR</span> <span id="percentage"
                             className="percentage">+12</span>
                     </div>
                     <div className="col-xl-4 mt-3">
@@ -36,4 +36,4 @@ class Currencydata extends Component {
     }
 }
 
-export default Currencydata;
+export default BTCTile;

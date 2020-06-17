@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import CurrencyData from '../models/currency_data'
+import OZTGTile from '../models/OZTGTile'
+import ETHTile from '../models/ETHTile'
+import LTCTile from '../models/LTCTile'
+import BTCTile from '../models/BTCTIle'
 import CurrencyChart from '../models/currency_chart'
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-    this.state = { data: <CurrencyData /> ,chart:<CurrencyChart title={"OZTG"}/> }
+    this.state = { data: <OZTGTile /> ,chart:<CurrencyChart title={"OZTG"}/> }
     }
   
     handleClick(letter) {
         
         if ("OZTG" === letter) {
-            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"OZTG"}/>});
+            this.setState({ data: <OZTGTile /> ,chart:<CurrencyChart title={"OZTG"}/>});
         } else if ("ETH" === letter) {
-            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"ETH"}/>});
+            this.setState({ data: <ETHTile /> ,chart:<CurrencyChart title={"ETH"}/>});
         }  else if ("LTC" === letter) {
-            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"LTC"}/>});
+            this.setState({ data: <LTCTile /> ,chart:<CurrencyChart title={"LTC"}/>});
         }else if ("BTC" === letter) {
-            this.setState({ data: <CurrencyData /> ,chart:<CurrencyChart title={"BTC"}/>});    
+            this.setState({ data: <BTCTile /> ,chart:<CurrencyChart title={"BTC"}/>});    
         }
       }
       
@@ -347,7 +350,7 @@ class Dashboard extends Component {
                                             <div className="col-xl-12">
                                                 <span className="heading">News</span>
                                             </div>
-                                            <div className="col-xl-12 mt-4">
+                                            <div className="col-xl-12 mt-2">
                                                 <span className="news">OZEETY, The Flashmoni Blockchain on live mode soon!⁣</span>
                                             </div>
                                             <div className="col-xl-12 mt-3">
