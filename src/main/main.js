@@ -15,12 +15,61 @@ class main extends Component {
     
     constructor(props) {
         super(props);
+        if(this.getData()===null){
         this.state={
             value: <Dashboard /> ,
                 heading:"Dashboard"
         }
+    }else{
+        if ("dashboard" === this.getData()) {
+            this.state={
+                value: <Dashboard /> ,
+                    heading:"Dashboard"
+            }
+        } else if ("markets" === this.getData()) {
+            this.state={
+                value: <Markets update={this.ChangefromTrading} />,
+                heading:"Markets" 
+            }
+            
+        }  else if ("wallets" === this.getData()) {
+            this.state={
+                value: <div> <Wallets update={this.ChangefromWalletOverview} /> <WallertAddCard/></div>,
+                heading:"Wallets"  
+            }
+        }else if("calculator" === this.getData()) {
+            this.state={
+                value: <Calculator/>,
+                heading:"Calculator" 
+            }
+        }else if("transaction" === this.getData()) {
+            this.state={
+                value: <Transactions/>,
+                heading:"Transaction"
+            }
+
+        }else if("cryptonews" === this.getData()) {
+            this.state={
+                value: <News/>,
+                heading:"News" 
+            }
+
+        }
     }
-    
+       
+    }
+    setData(para){
+        let obj={heading:para}
+       sessionStorage.setItem('mydata',JSON.stringify(obj))
+    }
+    getData(){
+        let data=sessionStorage.getItem('mydata');
+        data = JSON.parse(data);
+        let val=data.heading;
+        return val;
+    }
+
+
     ChangefromWalletOverview = () => {
         
         this.setState({ value: <WalletOverview  back={this.BackfromWalletOverview}/> });
@@ -37,8 +86,9 @@ class main extends Component {
         
 
     }
+    
     handledivChange = (event) => {
-        
+        this.setData(event.target.name);
         if ("dashboard" === event.target.name) {
             this.setState({ value: <Dashboard /> });
             this.setState({ heading:"Dashboard" });
@@ -151,5 +201,6 @@ class main extends Component {
         </div>);
     }
 }
+
 
 export default main;
