@@ -1,7 +1,7 @@
 import React from 'react';
-export const NewsFeed_02 = (props) =>{
+export const NEWSFEED_02 = (props) =>{
     return(
-        <div className="tile-parent col-xl-8">
+        <div data-aos="fade-up" data-aos-delay="50" className="tile-parent col-xl-8">
 
                     {/* <!-- in here, change the .mid-news background URL --> */}
                     <div className="news-tile d-flex mid-news">

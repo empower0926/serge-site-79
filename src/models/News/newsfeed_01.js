@@ -1,7 +1,7 @@
 import React from 'react';
-export const NewsFeed_01 = (props) =>{
+export const NEWSFEED_01 = (props) =>{
     return(
-        <div className="tile-parent col-xl-4">
+        <div data-aos="fade-up" className="tile-parent col-xl-4">
                     <div className="news-tile">
                         <img className="news-img" src="../assets/images/exported/mocks/news/1.svg" alt=""/>
                         <div className="news-play"><img src="../assets/images/exported/mocks/news/play.svg" alt=""/></div>
