@@ -1,7 +1,7 @@
 import React from 'react';
-export const NewsFeed_05 = (props) =>{
+export const NEWSFEED_05 = (props) =>{
     return(
-        <div className="news-tile">
+        <div data-aos="fade-up" data-aos-delay="200" className="news-tile">
                 <div className="news-timestamp mt-2">
                     <span className="align-self-end ml-3">Jan 09, 2018</span>
                 </div>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {NewsFeed_01} from '../models/News/NEWSFEED_01'
-import {NewsFeed_02} from '../models/News/NEWSFEED_02'
-import {NewsFeed_03} from '../models/News/NEWSFEED_03'
-import {NewsFeed_04} from '../models/News/NEWSFEED_04'
-import {NewsFeed_05} from '../models/News/NEWSFEED_05'
+import {NEWSFEED_01} from '../models/News/NEWSFEED_01'
+import {NEWSFEED_02} from '../models/News/NEWSFEED_02'
+import {NEWSFEED_03} from '../models/News/NEWSFEED_03'
+import {NEWSFEED_04} from '../models/News/NEWSFEED_04'
+import {NEWSFEED_05} from '../models/News/NEWSFEED_05'
 class News extends Component {
     state = {  }
     render() { 
@@ -15,23 +15,23 @@ class News extends Component {
         <div className="col-xl-8">
             <div className="row">
 
-                <NewsFeed_01/>
+                <NEWSFEED_01/>
 
-                <NewsFeed_02/>
+                <NEWSFEED_02/>
             </div>
 
 
 
             <div className="row">
                 
-                <NewsFeed_03/>
-                <NewsFeed_04/>
+                <NEWSFEED_03/>
+                <NEWSFEED_04/>
             </div>
         </div>
 
         {/* <!-- right side --> */}
         <div className="tile-parent col-xl-4">
-            <NewsFeed_05/>
+            <NEWSFEED_05/>
         </div>
     </div>
 </div>
