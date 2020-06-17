@@ -16,10 +16,7 @@ class main extends Component {
             heading:"Dashboard"
     }
     constructor(props) {
-        alert(page);
-        
-        super(props);
-        
+        super(props);   
     }
     
     ChangefromWalletOverview = () => {

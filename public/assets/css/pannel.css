@@ -770,3 +770,106 @@ a:hover{
     color: #707070;
     font-family: Heebo-Thin;
 }
+
+/* news ----------------------------- */
+
+.news-tile{
+    position: relative;
+    background-color: var(--nav-black);
+    border-radius: 3px;
+    margin-top: 2rem;
+    padding: 0 !important;
+}
+
+.news-img{
+    width: 100%;
+    position: relative;
+    border-radius: 3px 3px 0 0;
+}
+
+.news-timestamp{
+    width: 100%;
+    height: 38%;
+    position: absolute;
+    display: flex;
+    z-index: 999;
+}
+
+.news-header h5{
+    font-family: Heebo-Thin;
+    padding: 1rem;
+    max-width: 380px;
+}
+
+.sidebar-heading{
+    padding: 1rem 1rem 0 1rem !important;
+}
+
+.below-play-header{
+    margin-top: 2rem;
+}
+
+.news-play{
+    background-size: contain;
+    margin: 0 1rem !important;
+    padding: 2rem !important;
+    bottom: 4rem;
+    border-radius: 50px;
+    position: absolute;
+    background: none;
+    background-color: white;
+}
+
+.news-play:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1.1);
+    background-color: var(--block);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+}
+
+.news-play img{
+    right: 1.4rem;
+    bottom: 1.4rem;
+    position: absolute;
+}
+
+.news-play:hover{
+    transition: 0.3s;
+}
+
+.news-p{
+    font-size: 1rem;
+    margin-top: 0;
+    padding: 1rem;
+}
+
+.news-p p{
+    font-size: 1rem;
+}
+
+.mid-news{
+    padding: 1rem !important;
+    background: url(../images/exported/mocks/news/2.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bottom-news{
+    padding: 1rem !important;
+    background: url(../images/exported/mocks/news/3.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.read-more{
+    background: none;
+    border: 2px solid var(--main-color);
+    border-radius: 25px;
+    padding: 0.2rem 1.2rem;
+}
+
+.read-more:hover{
+    transition: 0.3s;
+    background-color: var(--main-color);
+}
