@@ -11,6 +11,15 @@
     .navbar-brand{
         display: block;
     }
+    .small-screen-trick{
+        display: grid !important;
+    }
+    .upload-img{
+        margin-top: 0 !important;
+    }
+    .change-password{
+        display: grid !important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -32,6 +41,12 @@
     }
     .navbar-brand{
         display: none;
+    }
+    .small-screen-trick{
+        display: flex !important;
+    }
+    .change-password{
+        display: flex !important;
     }
 }
 
@@ -65,6 +80,12 @@
     .support-text, .profile-text, .logout-text{
         display: none !important;
     }
+    .small-screen-trick{
+        display: flex !important;
+    }
+    .change-password{
+        display: flex !important;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -96,5 +117,11 @@
     
     .support-text, .profile-text, .logout-text{
         display: none !important;
+    }
+    .small-screen-trick{
+        display: flex !important;
+    }
+    .change-password{
+        display: flex !important;
     }
 }

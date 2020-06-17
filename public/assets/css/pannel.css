@@ -875,3 +875,84 @@ a:hover{
     transition: 0.3s;
     background-color: var(--main-color);
 }
+
+
+/* profile ------------------------ */
+
+
+
+.avarar{
+    height: 100%;
+}   
+
+.profile-message{
+    font-size: 1.1rem;
+    font-family: Heebo-light;
+    margin-bottom: 3rem;
+}
+
+.change-pic-message::after{
+    content: 'Max file is 10Mb';
+    display: block;
+    color: rgba(139, 149, 158, 0.548);
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+.upload-img{
+    margin:  0 !important;
+    font-size: 1rem;
+    padding: 0.5rem 2rem !important;
+}
+
+.nickname::after{
+    content: 'This name will be part of your public profile.';
+    display: block;
+    color: rgba(139, 149, 158, 0.548);
+    font-size: 0.7rem;
+}
+
+.left-label{
+    margin: 0 !important;
+    align-self: center;
+    margin-bottom: 1rem !important;
+}
+
+.profile-input{
+    width: 100%;
+    margin: 0 !important;
+}
+
+.personal-details{
+    margin-bottom: 0 !important;
+}
+
+.personal-details::after{
+    content: 'Your personal information is never to other users.';
+    display: block;
+    color: rgba(139, 149, 158, 0.548);
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+}
+.dob{
+    width: 100%;
+    border-radius: 3px;
+    padding: 14px 24px;
+}
+
+.profile-nav{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.profile-nav li{
+    margin-top: 2rem;
+    color: rgba(139, 149, 158, 0.548);;
+}
+
+.profile-complete{
+    text-align: center;
+    font-size: 1rem;
+    font-family: Heebo-light;
+}
