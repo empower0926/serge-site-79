@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import TransactionRow from '../models/transaction/transaction_row'
-
+import {PendingBtn} from '../models/transaction/transaction_pendingbtn'
+import {CompleteBtn} from '../models/transaction/transaction_completebtn'
 class Transactions extends Component {
-    state = {  }
+    state = { 
+        red_arrow:"../assets/images/exported/mocks/red-arrow.svg",
+        green_arrow:"../assets/images/exported/mocks/green-arrow.svg"
+     }
     render() { 
         return ( 
             <div className="container">
@@ -37,56 +41,10 @@ class Transactions extends Component {
 
     {/* <!-- transacion history shows here --> */}
     <div className="row">
-       <TransactionRow/>
-        {/* <!-- transaction row --> */}
-        <div className="col-xl-12 blue-block transaction-card">
-            <div className="row">
-               {/*  <!-- left --> */}
-                <div className="col-xl-1"></div>
-                <div className="col-xl-2 d-flex mt-1">
-                    <span className="my-auto mx-auto t-date">16:23, 12 dec 2018</span>
-                    <img className="ml-auto" src="../assets/images/exported/currencies/XRP.svg" alt="XRP"/>
-                </div>
-                {/* <!-- mid --> */}
-                <div className="col-xl-1"></div>
-                <div className="col-xl-4 d-flex mt-1">
-                    <img className="mr-2 arrow" src="../assets/images/exported/mocks/red-arrow.svg" alt=""/>
-                    <span className="my-auto">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t</span>
-                </div>
-               {/*  <!-- right --> */}
-                <div className="col-xl-4 d-flex mt-1 mb-1">
-                    <span className="my-auto t-value">0.0094 XRP</span>
-                    <span className="my-auto ml-auto span-pending">Pending <img className="ml-3"
-                            src="../assets/images/exported/pending.svg" alt=""/></span>
-                </div>
-            </div>
-        </div>
-
-        {/* <!-- transaction row --> */}
-        <div className="col-xl-12 blue-block transaction-card">
-            <div className="row">
-               {/*  <!-- left --> */}
-                <div className="col-xl-1"></div>
-                <div className="col-xl-2 d-flex mt-1">
-                    <span className="my-auto mx-auto t-date">16:23, 12 dec 2018</span>
-                    <img className="ml-auto" src="../assets/images/exported/currencies/BTC.svg" alt="BTC"/>
-                </div>
-                {/* <!-- mid --> */}
-                <div className="col-xl-1"></div>
-                <div className="col-xl-4 d-flex mt-1">
-                    <img className="mr-2 arrow" src="../assets/images/exported/mocks/red-arrow.svg" alt=""/>
-                    <span className="my-auto">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t</span>
-                </div>
-                {/* <!-- right --> */}
-                <div className="col-xl-4 d-flex mt-1 mb-1">
-                    <span className="my-auto t-value">0.0094 BTC</span>
-                    <span className="my-auto ml-auto span-completed">Completed <img className="ml-3"
-                            src="../assets/images/exported/checked.svg" alt=""/></span>
-                </div>
-            </div>
-        </div>
-
-
+       <TransactionRow button={<PendingBtn/>}arrowimg={this.state.green_arrow}/>
+       <TransactionRow button={<CompleteBtn/>} arrowimg={this.state.red_arrow}/>
+       <TransactionRow button={<PendingBtn/>}arrowimg={this.state.green_arrow}/>
+       <TransactionRow button={<CompleteBtn/>} arrowimg={this.state.red_arrow}/>
     </div>
 
 </div>

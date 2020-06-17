@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {CompleteBtn} from './transaction_completebtn'
-import {PendingBtn} from './transaction_pendingbtn'
+
+
 
 class TransactionRow extends Component {
    
@@ -18,13 +18,13 @@ class TransactionRow extends Component {
             {/* <!-- mid --> */}
             <div className="col-xl-1"></div>
             <div className="col-xl-4 d-flex mt-1">
-                <img className="mr-2 arrow" src="../assets/images/exported/mocks/red-arrow.svg" alt=""/>
+                <img className="mr-2 arrow" src={this.props.arrowimg} alt=""/>
                 <span className="my-auto">1Cs4wu6pu5qCZ35bSLNVzGyEx5N6uzbg9t</span>
             </div>
            {/*  <!-- right --> */}
             <div className="col-xl-4 d-flex mt-1 mb-1">
                 <span className="my-auto t-value">0.0094 XRP</span>
-                <CompleteBtn/>
+                {this.props.button}
             </div>
         </div>
     </div>

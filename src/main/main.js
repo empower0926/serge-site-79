@@ -72,35 +72,35 @@ class main extends Component {
                         <button className="side-nav-link" href="/"><img src="../assets/images/exported/nav_icons/logo.svg" alt="home" /></button>
                     </li>
                     <li className="side-nav-item">
-                      <Link to="navbar-brand" smooth={true} duration={1000} > <button className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
+                      <Link to="root" smooth={true} duration={1000} > <button className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
                             alt="dashboard" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button className="side-nav-link" href="/" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
+                    <Link to="root" smooth={true} duration={1000} ><button className="side-nav-link" href="/" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
                             alt="wallets" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
+                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
                             alt="markets" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button className="side-nav-link" href="/" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
+                    <Link to="root" smooth={true} duration={1000} ><button className="side-nav-link" href="/" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
                             alt="blockchain" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
+                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
                             alt="transaction" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="calculator" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
+                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="calculator" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
                             alt="calculator" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="cryptonews" onClick={this.handledivChange}><img name="cryptonews" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
+                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="cryptonews" onClick={this.handledivChange}><img name="cryptonews" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
                             alt="crypto news" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="navbar-brand" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
+                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
                             alt="settings" /></button></Link>
                     </li>
                 </ul>
