@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WallertCard from '../models/wallet_card'
+import WallertCard from '../models/Wallet/wallet_card'
 
 
 

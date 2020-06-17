@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import Currencyblock from '../models/currency_block'
+import Currencyblock from '../models/Currency/currency_block'
 
 class Calculator extends Component {
   
     constructor(props) {
         super(props);
-        this.state = { inputvalue: 0,
+        this.state = { inputvalue: '',
         from: "BTC",
         to: "BTC",
         output: 0}
     }
+    
     handleButton(number) {
+        
         this.setState({ inputvalue: this.state.inputvalue+ number});
     }
     handlefrom= (event) => {
@@ -22,7 +24,9 @@ class Calculator extends Component {
      showResult(){
         this.setState({ output: this.state.inputvalue});
             }
-
+     clearCal(){
+         this.setState({ inputvalue: '',output: '0'});
+             }
     render() { 
         return ( 
             <div class="container-fluid">
@@ -60,7 +64,7 @@ class Calculator extends Component {
             </div>
             <div class="row">
                 <div class="d-flex cal-input">
-                    <input type="text" value={this.state.inputvalue}/>
+                    <input type="text" placeholder="0" value={this.state.inputvalue}/>
                     <button onClick={() => this.showResult()}class="cal-ok"><img src="../assets/images/exported/cal-ok.svg" alt=""/></button>
                 </div>
             </div>
@@ -68,19 +72,19 @@ class Calculator extends Component {
            {/*  <!-- numbers --> */}
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton(7)}  class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('7')}  class="blue-block d-flex justify-content-center">
                         <button class="cal-btn">7</button>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div  onClick={() => this.handleButton(8)} class="blue-block d-flex justify-content-center">
+                    <div  onClick={() => this.handleButton('8')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">8</button>
                     </div>
                 </div>
 
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton(9)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('9')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">9</button>
                     </div>
                 </div>
@@ -88,19 +92,19 @@ class Calculator extends Component {
 
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton(4)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('4')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">4</button>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div onClick={() => this.handleButton(5)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('5')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">5</button>
                     </div>
                 </div>
 
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton(6)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('6')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">6</button>
                     </div>
                 </div>
@@ -108,19 +112,19 @@ class Calculator extends Component {
 
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton(1)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('1')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">1</button>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div onClick={() => this.handleButton(2)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('2')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">2</button>
                     </div>
                 </div>
 
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton(3)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('3')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">3</button>
                     </div>
                 </div>
@@ -128,7 +132,7 @@ class Calculator extends Component {
 
             <div class="row mt-3">
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton(0)} class="blue-block d-flex justify-content-center">
+                    <div onClick={() => this.handleButton('0')} class="blue-block d-flex justify-content-center">
                         <button  class="cal-btn">0</button>
                     </div>
                 </div>
@@ -140,7 +144,7 @@ class Calculator extends Component {
                 </div>
 
                 <div class="col p-0">
-                    <div onClick={() => this.handleButton('clear')} class="blue-block cal-cancel d-flex justify-content-center">
+                    <div onClick={() => this.clearCal()} class="blue-block cal-cancel d-flex justify-content-center">
                         <button  class="cal-btn">C</button>
                     </div>
                 </div>
@@ -187,5 +191,5 @@ class Calculator extends Component {
          );
     }
 }
- 
+
 export default Calculator;

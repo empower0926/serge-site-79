@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import OZTGTile from '../models/OZTGTile'
-import ETHTile from '../models/ETHTile'
-import LTCTile from '../models/LTCTile'
-import BTCTile from '../models/BTCTIle'
-import CurrencyChart from '../models/currency_chart'
+import OZTGTile from '../models/Tiles/OZTGTile'
+import ETHTile from '../models/Tiles/ETHTile'
+import LTCTile from '../models/Tiles/LTCTile'
+import BTCTile from '../models/Tiles/BTCTIle'
+import CurrencyChart from '../models/Currency/currency_chart'
 class Dashboard extends Component {
     constructor(props) {
         super(props);
