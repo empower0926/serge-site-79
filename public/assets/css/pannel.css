@@ -1039,3 +1039,12 @@ a:hover{
 .refer-check{
     width: 24px !important;
 }
+
+.card-succes{
+    text-align: center;
+}
+
+.card-message{
+    width: 70%;
+    font-size: 2rem;
+}

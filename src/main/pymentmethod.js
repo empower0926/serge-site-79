@@ -4,6 +4,8 @@ import BankAdd2 from '../models/bank_acc/bank_add_2'
 import BankAdd3 from '../models/bank_acc/bank_add_3'
 import CardLink1 from '../models/card/card_link_1'
 import CardLink2 from '../models/card/card_link_2'
+import CardError from '../models/card/card_error'
+import CardSuccess from '../models/card/card_success'
 
 
 
@@ -14,7 +16,7 @@ class BuySell extends Component {
         this.state={
             value: <BankAdd1 update={() => this.BankChange("1")}/>,
             Cardclass:"",
-            Bankclass:""
+            Bankclass:"",  
         }
     }
     BankChange (para){
@@ -26,8 +28,19 @@ class BuySell extends Component {
     }
     CardChange (para){
         if(para==="1"){
-            this.setState({ value: <CardLink2 update={() => this.BankChange("2")} />});
+            this.setState({ value: <CardLink2 update={() => this.CardChange("2")} success={() => this.CardSuccess()}/>});
+            issuccess="error";
+        }else if(para==="2"){
+            if(issuccess==="success"){
+                this.setState({ value: <CardSuccess />});
+            }else{
+                this.setState({ value: <CardError/>});
+            }  
         }
+
+    }
+    CardSuccess(){
+       issuccess="success";
     }
 Chnge(para) {
 if(para==="Card"){
@@ -73,5 +86,5 @@ if(para==="Card"){
     );
   }
 }
-
+let issuccess="error";
 export default BuySell;

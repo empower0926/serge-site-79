@@ -9,7 +9,7 @@ class CARDLINK_2 extends Component {
         <div className="col-xl-2"></div>
         <div className="col-xl-8 d-flex justify-content-center">
             <div className="bank-form">
-                <form action="">
+                <form onSubmit={this.props.update} action="">
                     <div>
                         <span>COUNTRY</span>
                         <select className="bank-select" name="" id="">
@@ -24,7 +24,7 @@ class CARDLINK_2 extends Component {
                     <div className="mt-4">
                         <span>CARD NUMBER</span>
                         <div className="reference-input d-flex mt-2">
-                            <input className="m-0 p-0" type="text"/>
+                            <input onChange={this.props.success} className="m-0 p-0" type="text"/>
                             <img src="../assets/images/exported/img-fi-visa.svg" alt=""/>
                             <img className="ml-2"
                                 src="../assets/images/exported/img-fi-mastercard.svg"

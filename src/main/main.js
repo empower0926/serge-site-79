@@ -9,7 +9,7 @@ import Transactions from './transactions'
 import News from './news'
 import Profile from './profile'
 import WallertAddCard from '../models/Wallet/wallet_add_card'
-import BuySell from './buy_sell'
+import BuySell from './pymentmethod'
 import {Link} from 'react-scroll'
 
 
@@ -17,52 +17,61 @@ class main extends Component {
     
     constructor(props) {
         super(props);
-      
-        if(this.getData()===null){
+        
+      if(this.state===undefined){
         this.state={
             value: <Dashboard update={this.ToBuySell}/> ,
                 heading:"Dashboard"
         }
-    }else{
-        if ("dashboard" === this.getData()) {
+      }else{
+        if(this.getData()===null){
             this.state={
                 value: <Dashboard update={this.ToBuySell}/> ,
                     heading:"Dashboard"
             }
-        } else if ("markets" === this.getData()) {
+        }else{
+            if ("dashboard" === this.getData()) {
+                this.state={
+                    value: <Dashboard update={this.ToBuySell}/> ,
+                        heading:"Dashboard"
+                }
+            } else if ("markets" === this.getData()) {
+                this.state={
+                    value: <Markets update={this.ChangefromTrading} />,
+                    heading:"Markets" 
+                }
+                
+            }  else if ("wallets" === this.getData()) {
+                this.state={
+                    value: <div> <Wallets update={this.ChangefromWalletOverview} /> <WallertAddCard/></div>,
+                    heading:"Wallets"  
+                }
+            }else if("calculator" === this.getData()) {
+                this.state={
+                    value: <Calculator/>,
+                    heading:"Calculator" 
+                }
+            }else if("transaction" === this.getData()) {
+                this.state={
+                    value: <Transactions/>,
+                    heading:"Transaction"
+                }
+    
+            }else if("cryptonews" === this.getData()) {
+                this.state={
+                    value: <News/>,
+                    heading:"News" 
+                }
+        }else if("settings" === this.getData()) {
             this.state={
-                value: <Markets update={this.ChangefromTrading} />,
-                heading:"Markets" 
+                value: <Profile/>,
+                heading:"Settings" 
             }
-            
-        }  else if ("wallets" === this.getData()) {
-            this.state={
-                value: <div> <Wallets update={this.ChangefromWalletOverview} /> <WallertAddCard/></div>,
-                heading:"Wallets"  
-            }
-        }else if("calculator" === this.getData()) {
-            this.state={
-                value: <Calculator/>,
-                heading:"Calculator" 
-            }
-        }else if("transaction" === this.getData()) {
-            this.state={
-                value: <Transactions/>,
-                heading:"Transaction"
-            }
-
-        }else if("cryptonews" === this.getData()) {
-            this.state={
-                value: <News/>,
-                heading:"News" 
-            }
-    }else if("settings" === this.getData()) {
-        this.state={
-            value: <Profile/>,
-            heading:"Settings" 
-        }
-
-}}
+    
+    }
+    }
+      }
+      
        
     }
     setData(para){
@@ -143,35 +152,35 @@ class main extends Component {
                         <button className="side-nav-link" href="/"><img src="../assets/images/exported/nav_icons/logo.svg" alt="home" /></button>
                     </li>
                     <li className="side-nav-item">
-                      <Link to="root" smooth={true} duration={1000} > <button className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
+                      <Link to="root" smooth={true} duration={1000} name="dashboard" onClick={this.handledivChange}> <button className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="dashboard" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/dashboard.svg"
                             alt="dashboard" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="root" smooth={true} duration={1000} ><button className="side-nav-link" href="/" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
+                    <Link to="root" smooth={true} duration={1000} name="wallets" onClick={this.handledivChange}><button className="side-nav-link" href="/" name="wallets" onClick={this.handledivChange}><img name="wallets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/wallets.svg"
                             alt="wallets" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="markets" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
+                    <Link to="root" smooth={true} duration={1000} name="dashboard" onClick={this.handledivChange}><button  className="side-nav-link" href="/" name="dashboard" onClick={this.handledivChange}><img name="markets" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/markets.svg"
                             alt="markets" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="root" smooth={true} duration={1000} ><button className="side-nav-link" href="/" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
+                    <Link to="root" smooth={true} duration={1000} name="trading" onClick={this.handledivChange}><button className="side-nav-link" href="/" name="trading" onClick={this.handledivChange}><img name="trading" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/blockchain.svg"
                             alt="blockchain" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
+                    <Link to="root" smooth={true} duration={1000} name="transaction" onClick={this.handledivChange}><button  className="side-nav-link" href="/" name="transaction" onClick={this.handledivChange}><img name="transaction" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/transaction.svg"
                             alt="transaction" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="calculator" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
+                    <Link to="root" smooth={true} duration={1000} name="calculator" onClick={this.handledivChange}><button  className="side-nav-link" href="/" name="calculator" onClick={this.handledivChange}><img name="calculator" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/cal.svg"
                             alt="calculator" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="cryptonews" onClick={this.handledivChange}><img name="cryptonews" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
+                    <Link to="root" smooth={true} duration={1000} name="cryptonews" onClick={this.handledivChange}><button  className="side-nav-link" href="/" name="cryptonews" onClick={this.handledivChange}><img name="cryptonews" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/news.svg"
                             alt="crypto news" /></button></Link>
                     </li>
                     <li className="side-nav-item">
-                    <Link to="root" smooth={true} duration={1000} ><button  className="side-nav-link" href="/" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
+                    <Link to="root" smooth={true} duration={1000} name="settings" onClick={this.handledivChange}><button  className="side-nav-link" href="/" name="settings" onClick={this.handledivChange}><img name="settings" onClick={this.handledivChange} src="../assets/images/exported/nav_icons/settings.svg"
                             alt="settings" /></button></Link>
                     </li>
                 </ul>
