@@ -60,6 +60,7 @@ class Buysell extends Component {
 
 
         {/* <!-- right side --> */}
+        <div class="col-xl-1"></div>
         {this.state.right}
     </div>
 </div>

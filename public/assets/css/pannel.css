@@ -283,7 +283,7 @@ a:hover{
 .tile:hover{
     cursor: pointer;
     transition: 0.3s;
-    background-color: #070733;
+    transform: scale(1.01);
 }
 
 .overview:hover{
@@ -987,11 +987,6 @@ a:hover{
 
 .buy-sell-body{
     padding: 5rem 0;
-}
-
-.buy-sell-header:hover{
-    background-color: var(--block);
-    transition: 0.3s;
 }
 
 .bank-form input{

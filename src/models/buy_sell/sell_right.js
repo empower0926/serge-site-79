@@ -5,7 +5,7 @@ class SellRight extends Component {
     render() { 
         return ( 
             
-<div data-aos="fade-up" class="col-xl-5 mt-5">
+<div data-aos="fade-left" class="col-xl-5 mt-5">
     <div class="row">
         <div class="col-xl-12 d-flex justify-content-center">
             <span class="heading">YOU ARE BUYING</span>
