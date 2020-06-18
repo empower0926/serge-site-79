@@ -956,3 +956,86 @@ a:hover{
     font-size: 1rem;
     font-family: Heebo-light;
 }
+
+
+
+
+/*  buy sell ---------------------------------- */
+
+.close-btn{
+    position: absolute;
+}
+
+.close-btn button{
+    margin: 0;
+    padding: 12px;
+    background: none;
+    z-index: 999;
+}
+
+.close-btn button:hover{
+    transition: .3s;
+    border-radius: 25%;
+    background-color: #06062B;
+}
+
+.buy-sell-header{
+    font-family: Heebo-Light;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.buy-sell-body{
+    padding: 5rem 0;
+}
+
+.buy-sell-header:hover{
+    background-color: var(--block);
+    transition: 0.3s;
+}
+
+.bank-form input{
+    width: 100%;
+    margin-top: 0.5rem !important;
+}
+
+.bank-select{
+    margin-top: 0.5rem !important;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    padding: 15px 24px;
+}
+
+.country-select{
+    margin-top: 0.5rem !important;
+    border: none;
+    background-color: white;
+    width: 100%;
+    border-radius: 3px;
+    padding: 25px 0;
+}
+
+.buy-sell-btn{
+    width: 100%;
+}
+
+.reference-input{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.reference-input img:hover{
+    cursor: pointer;
+}
+
+.reference-input input[type="text"]{
+    margin-top: 0 !important;
+    background-color: white;
+    margin-right: 1rem !important;
+}
+
+.refer-check{
+    width: 24px !important;
+}

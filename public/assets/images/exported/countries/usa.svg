@@ -1,0 +1,37 @@
+<svg id="United_States_of_America" data-name="United States of America" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="16" viewBox="0 0 21 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_77" data-name="Rectangle 77" width="21" height="16" rx="1" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectangle_77-2" data-name="Rectangle 77" width="21" height="16" rx="1" fill="#fff"/>
+  <g id="United_States_of_America-2" data-name="United States of America" clip-path="url(#clip-path)">
+    <rect id="Rectangle_119" data-name="Rectangle 119" width="21" height="16" fill="#b22234"/>
+    <g id="stars">
+      <rect id="Rectangle_74" data-name="Rectangle 74" width="10" height="9" fill="#3c3b6e"/>
+      <rect id="Rectangle_125" data-name="Rectangle 125" width="1.429" height="1.286" transform="translate(1.429 1.286)" fill="#fff"/>
+      <rect id="Rectangle_134" data-name="Rectangle 134" width="1.429" height="1.286" transform="translate(4.286 1.286)" fill="#fff"/>
+      <rect id="Rectangle_138" data-name="Rectangle 138" width="1.429" height="1.286" transform="translate(7.143 1.286)" fill="#fff"/>
+      <rect id="Rectangle_139" data-name="Rectangle 139" width="1.429" height="1.286" transform="translate(7.143 3.857)" fill="#fff"/>
+      <rect id="Rectangle_140" data-name="Rectangle 140" width="1.429" height="1.286" transform="translate(4.286 3.857)" fill="#fff"/>
+      <rect id="Rectangle_135" data-name="Rectangle 135" width="1.429" height="1.286" transform="translate(1.429 3.857)" fill="#fff"/>
+      <rect id="Rectangle_136" data-name="Rectangle 136" width="1.429" height="1.286" transform="translate(7.143 6.429)" fill="#fff"/>
+      <rect id="Rectangle_141" data-name="Rectangle 141" width="1.429" height="1.286" transform="translate(4.286 6.429)" fill="#fff"/>
+      <rect id="Rectangle_137" data-name="Rectangle 137" width="1.429" height="1.286" transform="translate(1.429 6.429)" fill="#fff"/>
+    </g>
+    <g id="stripes" transform="translate(-4 1)">
+      <rect id="Rectangle_77-3" data-name="Rectangle 77" width="11.842" height="1.364" transform="translate(13.158)" fill="#fff"/>
+      <rect id="Rectangle_120" data-name="Rectangle 120" width="11.842" height="1.364" transform="translate(13.158 2.727)" fill="#fff"/>
+      <rect id="Rectangle_121" data-name="Rectangle 121" width="11.842" height="1.364" transform="translate(13.158 5.455)" fill="#fff"/>
+      <rect id="Rectangle_122" data-name="Rectangle 122" width="25" height="1.364" transform="translate(0 8.182)" fill="#fff"/>
+      <rect id="Rectangle_124" data-name="Rectangle 124" width="25" height="1.364" transform="translate(0 13.636)" fill="#fff"/>
+      <rect id="Rectangle_123" data-name="Rectangle 123" width="25" height="1.364" transform="translate(0 10.909)" fill="#fff"/>
+    </g>
+    <g id="Overlay">
+      <g id="Overlay-2" data-name="Overlay" fill="none" stroke="rgba(0,0,0,0.1)" stroke-miterlimit="10" stroke-width="1" style="mix-blend-mode: multiply;isolation: isolate">
+        <rect width="21" height="16" stroke="none"/>
+        <rect x="0.5" y="0.5" width="20" height="15" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
