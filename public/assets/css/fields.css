@@ -1,15 +1,17 @@
-.settings input:focus, .settings button {
+.settings input:focus, .settings button, .buy-sell input:focus, .buy-sell button {
     outline: none;
 }
 
-.settings input[type="text"], .settings input[type="email"], .settings input[type="password"] {
+.settings input[type="text"], .settings input[type="email"], .settings input[type="password"], 
+.buy-sell input[type="text"], .buy-sell input[type="email"], .buy-sell input[type="password"] 
+{
     margin-top: 20px;
     border: none;
     border-radius: 3px;
     padding: 16px 24px;
 }
 
-.settings button, .settings input[type="submit"] {
+.settings button, .settings input[type="submit"], .buy-sell button, .buy-sell input[type="submit"] {
     background-color: var(--main-color);
     color: white;
     margin-top: 20px;
@@ -19,6 +21,6 @@
     transition: .3s;
 }
 
-.settings button:focus{
+.settings button:focus, .buy-sell button:focus{
     outline: none !important;
 }

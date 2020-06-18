@@ -7,19 +7,38 @@ import CurrencyChart from '../models/Currency/currency_chart'
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-    this.state = { data: <OZTGTile /> ,chart:<CurrencyChart title={"OZTG"}/> }
+    this.state = { data: <OZTGTile update={this.props.update}/> ,chart:<CurrencyChart title={"OZTG"}/> ,
+    OZTGTileclass:"tile buy-sell-btn",
+    ETHTileclass :"tile",
+    LTCTileclass :"tile",
+    BTCTileclass :"tile"
+}
     }
-  
+    RemoveselectAllTile = () => {
+        this.setState({ OZTGTileclass:"tile"});  
+        this.setState({ ETHTileclass:"tile"});
+        this.setState({ LTCTileclass:"tile"});
+        this.setState({ BTCTileclass:"tile"});
+    }
+   
     handleClick(letter) {
         
         if ("OZTG" === letter) {
-            this.setState({ data: <OZTGTile /> ,chart:<CurrencyChart title={"OZTG"}/>});
+            this.setState({ data: <OZTGTile update={this.props.update}/> ,chart:<CurrencyChart title={"OZTG"}/>});
+            this.RemoveselectAllTile();
+            this.setState({ OZTGTileclass:"tile buy-sell-btn"});  
         } else if ("ETH" === letter) {
-            this.setState({ data: <ETHTile /> ,chart:<CurrencyChart title={"ETH"}/>});
+            this.setState({ data: <ETHTile update={this.props.update}/> ,chart:<CurrencyChart title={"ETH"}/>});
+            this.RemoveselectAllTile();
+            this.setState({ ETHTileclass:"tile buy-sell-btn"});
         }  else if ("LTC" === letter) {
-            this.setState({ data: <LTCTile /> ,chart:<CurrencyChart title={"LTC"}/>});
+            this.setState({ data: <LTCTile update={this.props.update}/> ,chart:<CurrencyChart title={"LTC"}/>});
+            this.RemoveselectAllTile();
+            this.setState({ LTCTileclass:"tile buy-sell-btn"});
         }else if ("BTC" === letter) {
-            this.setState({ data: <BTCTile /> ,chart:<CurrencyChart title={"BTC"}/>});    
+            this.setState({ data: <BTCTile update={this.props.update}/> ,chart:<CurrencyChart title={"BTC"}/>}); 
+            this.RemoveselectAllTile(); 
+            this.setState({ BTCTileclass:"tile buy-sell-btn"});  
         }
       }
       
@@ -45,7 +64,7 @@ class Dashboard extends Component {
                                     <div className="row">
                                     
                                         <div name="OZTG" onClick={() => this.handleClick("OZTG")}  data-aos="fade-up" data-aos-delay="50" className="tile-parent col-xl-3">
-                                            <div  className="tile" >
+                                            <div  className={this.state.OZTGTileclass} >
                                                 <div className="row">
                                                     <div className="col-xl-12">
                                                         <span id="c-name" className="c-name">OZTG</span>
@@ -61,7 +80,7 @@ class Dashboard extends Component {
                                         </div>
 
                                         <div name="ETH"onClick={() => this.handleClick("ETH")} data-aos="fade-up" data-aos-delay="100" className="tile-parent col-xl-3">
-                                            <div className="tile">
+                                            <div className={this.state.ETHTileclass}>
                                                 <div className="row">
                                                     <div className="col-xl-12">
                                                         <span id="c-name" className="c-name">ETH</span>
@@ -76,7 +95,7 @@ class Dashboard extends Component {
                                         </div>
 
                                         <div name="LTC"onClick={() => this.handleClick("LTC")} data-aos="fade-up" data-aos-delay="150" className="tile-parent col-xl-3">
-                                            <div className="tile">
+                                            <div className={this.state.LTCTileclass}>
                                                 <div className="row">
                                                     <div className="col-xl-12">
                                                         <span id="c-name" className="c-name">LTC</span>
@@ -91,7 +110,7 @@ class Dashboard extends Component {
                                         </div>
 
                                         <div name="BTC"onClick={() => this.handleClick("BTC")} data-aos="fade-up" data-aos-delay="200" className="tile-parent col-xl-3">
-                                            <div className="tile">
+                                            <div className={this.state.BTCTileclass}>
                                                 <div className="row">
                                                     <div className="col-xl-12">
                                                         <span id="c-name" className="c-name">BTC</span>
@@ -367,4 +386,5 @@ class Dashboard extends Component {
         );
     }
 }
+
 export default Dashboard;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 class OZTGTile extends Component {
 
     render() {
+        
         return (
             <div data-aos="fade-left" className="tile">
                 {/* <!-- transactions and wallets --> */}
@@ -28,7 +29,7 @@ class OZTGTile extends Component {
                             className="percentage">+12</span>
                     </div>
                     <div className="col-xl-4 mt-3">
-                        <button id="buy-sell" className="outile-btn">buy/sell</button>
+                        <button id="buy-sell" className="outile-btn" onClick={() => this.props.update()}>buy/sell</button>
                     </div>
                 </div>
             </div>

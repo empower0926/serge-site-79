@@ -9,6 +9,7 @@ import Transactions from './transactions'
 import News from './news'
 import Profile from './profile'
 import WallertAddCard from '../models/Wallet/wallet_add_card'
+import BuySell from './buy_sell'
 import {Link} from 'react-scroll'
 
 
@@ -16,15 +17,16 @@ class main extends Component {
     
     constructor(props) {
         super(props);
+      
         if(this.getData()===null){
         this.state={
-            value: <Dashboard /> ,
+            value: <Dashboard update={this.ToBuySell}/> ,
                 heading:"Dashboard"
         }
     }else{
         if ("dashboard" === this.getData()) {
             this.state={
-                value: <Dashboard /> ,
+                value: <Dashboard update={this.ToBuySell}/> ,
                     heading:"Dashboard"
             }
         } else if ("markets" === this.getData()) {
@@ -87,17 +89,26 @@ class main extends Component {
          this.setState({ heading:"Wallets" });
     
     }
+    BackfromBuysell = () => {
+        this.setState({ value: <Dashboard update={this.ToBuySell}/> });
+            this.setState({ heading:"Dashboard" });
+    
+    }
     ChangefromTrading = () => {
         this.setState({ value: <Trading /> });
         this.setState({ heading:"Trading" });
         
 
     }
+    ToBuySell = () => {
+        this.setState({ value: <BuySell update={this.BackfromBuysell}/> });
+        this.setState({ heading:"Dashboard" });
+    }
     
     handledivChange = (event) => {
         this.setData(event.target.name);
         if ("dashboard" === event.target.name) {
-            this.setState({ value: <Dashboard /> });
+            this.setState({ value: <Dashboard update={this.ToBuySell}/> });
             this.setState({ heading:"Dashboard" });
         } else if ("markets" === event.target.name) {
             this.setState({ value: <Markets update={this.ChangefromTrading} /> });

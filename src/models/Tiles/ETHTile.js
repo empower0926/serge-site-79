@@ -28,7 +28,7 @@ class ETHTile extends Component {
                             className="percentage">+12</span>
                     </div>
                     <div className="col-xl-4 mt-3">
-                        <button id="buy-sell" className="outile-btn">buy/sell</button>
+                        <button id="buy-sell" className="outile-btn" onClick={() => this.props.update()}>buy/sell</button>
                     </div>
                 </div>
             </div>
