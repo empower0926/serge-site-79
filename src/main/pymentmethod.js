@@ -16,8 +16,8 @@ class BuySell extends Component {
         super(props);
         this.state={
             value: <BankAdd1 update={() => this.BankChange("1")}/>,
-            Cardclass:"",
-            Bankclass:"",  
+            Cardclass:"col buy-sell-header card-select",
+            Bankclass:"col buy-sell-header ",  
         }
     }
     BankChange (para){
@@ -48,12 +48,12 @@ class BuySell extends Component {
 Chnge(para) {
 if(para==="Card"){
     this.setState({ value: <CardLink1 update={() => this.CardChange("1")}/> });
-    this.setState({ Cardclass: "" });
-    this.setState({ Bankclass: "" });
+    this.setState({ Cardclass: "col buy-sell-header " });
+    this.setState({ Bankclass: "col buy-sell-header card-select" });
 }else{
     this.setState({ value: <BankAdd1 update={() => this.BankChange("1")} />});
-    this.setState({ Cardclass: "" });
-    this.setState({ Bankclass: "" });
+    this.setState({ Cardclass: "col buy-sell-header card-select" });
+    this.setState({ Bankclass: "col buy-sell-header " });
 }
 }
   render() {
@@ -68,11 +68,11 @@ if(para==="Card"){
                                 <button onClick={this.props.update} className="ml-auto"><img src="../assets/images/exported/cross.svg" alt="" /></button>
                             </div>
 
-                            <div onClick={() => this.Chnge("Card")} className="col buy-sell-header">
+                            <div onClick={() => this.Chnge("Card")} className={this.state.Cardclass}>
                                 Card
                     </div>
 
-                            <div onClick={() => this.Chnge("Bank")} className="col buy-sell-header">
+                            <div onClick={() => this.Chnge("Bank")} className={this.state.Bankclass}>
                                 Bank Account
                     </div>
                         </div>

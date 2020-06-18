@@ -8,7 +8,7 @@ class Dashboard extends Component {
     constructor(props) {
         super(props);
     this.state = { data: <OZTGTile update={this.props.update}/> ,chart:<CurrencyChart title={"OZTG"}/> ,
-    OZTGTileclass:"tile buy-sell-btn",
+    OZTGTileclass:"tile card-select",
     ETHTileclass :"tile",
     LTCTileclass :"tile",
     BTCTileclass :"tile"
@@ -26,19 +26,19 @@ class Dashboard extends Component {
         if ("OZTG" === letter) {
             this.setState({ data: <OZTGTile update={this.props.update}/> ,chart:<CurrencyChart title={"OZTG"}/>});
             this.RemoveselectAllTile();
-            this.setState({ OZTGTileclass:"tile buy-sell-btn"});  
+            this.setState({ OZTGTileclass:"tile card-select"});  
         } else if ("ETH" === letter) {
             this.setState({ data: <ETHTile update={this.props.update}/> ,chart:<CurrencyChart title={"ETH"}/>});
             this.RemoveselectAllTile();
-            this.setState({ ETHTileclass:"tile buy-sell-btn"});
+            this.setState({ ETHTileclass:"tile card-select"});
         }  else if ("LTC" === letter) {
             this.setState({ data: <LTCTile update={this.props.update}/> ,chart:<CurrencyChart title={"LTC"}/>});
             this.RemoveselectAllTile();
-            this.setState({ LTCTileclass:"tile buy-sell-btn"});
+            this.setState({ LTCTileclass:"tile card-select"});
         }else if ("BTC" === letter) {
             this.setState({ data: <BTCTile update={this.props.update}/> ,chart:<CurrencyChart title={"BTC"}/>}); 
             this.RemoveselectAllTile(); 
-            this.setState({ BTCTileclass:"tile buy-sell-btn"});  
+            this.setState({ BTCTileclass:"tile card-select"});  
         }
       }
       
