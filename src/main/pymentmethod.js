@@ -10,7 +10,7 @@ import CardSuccess from '../models/card/card_success'
 
 
 class BuySell extends Component {
-  
+
     constructor(props) {
         super(props);
         this.state={
@@ -56,35 +56,36 @@ if(para==="Card"){
   render() {
     return (
         <div data-aos="fade-up" className="container-fluid buy-sell">
-        <div className="row">
-            <div className="col-xl-6 tile py-0">
+        
                 <div className="row">
-    
-                    <div className="col-xl-12 d-flex close-btn">
-                        <button onClick={this.props.update} className="ml-auto"><img src="../assets/images/exported/cross.svg" alt=""/></button>
+                    <div className="col-xl-6 tile py-0">
+                        <div className="row">
+
+                            <div className="col-xl-12 d-flex close-btn">
+                                <button onClick={this.props.update} className="ml-auto"><img src="../assets/images/exported/cross.svg" alt="" /></button>
+                            </div>
+
+                            <div onClick={() => this.Chnge("Card")} className="col buy-sell-header">
+                                Card
                     </div>
-    
-                    <div onClick={() => this.Chnge("Card")}  className="col buy-sell-header">
-                        Card
+
+                            <div onClick={() => this.Chnge("Bank")} className="col buy-sell-header">
+                                Bank Account
                     </div>
-    
-                    <div onClick={() => this.Chnge("Bank")} className="col buy-sell-header">
-                        Bank Account
-                    </div>
-                </div>
-    
-                <div className="row">
-                    <div data-aos="fade-up" data-aos-delay="50" className="col-xl-12">
-                        {/* <!-- body changes here --> */}
-                        {this.state.value}
-    
+                        </div>
+
+                        <div className="row">
+                            <div data-aos="fade-up" data-aos-delay="50" className="col-xl-12">
+                                {/* <!-- body changes here --> */}
+                                {this.state.value}
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    );
-  }
+        );
+    }
 }
 let issuccess="error";
 export default BuySell;

@@ -1039,7 +1039,9 @@ a:hover{
 .refer-check{
     width: 24px !important;
 }
+/* card */
 
+>>>>>>> 275342ba9ccaf89faed02a93fa3d5e80bf746685
 .card-succes{
     text-align: center;
 }
@@ -1048,3 +1050,46 @@ a:hover{
     width: 70%;
     font-size: 2rem;
 }
+<<<<<<< HEAD
+=======
+
+
+/* buy -sell pannel */
+
+.buy-value{
+    font-size: 2rem;
+}
+
+.add-payment-method{
+    background: none;
+    padding: 0;
+}
+
+.text-main{
+    color: var(--main-color);
+}
+
+.wallet{
+    width: 28px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    margin-top: 0.8rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+.summery{
+    border: 1px var(--block) solid;
+    padding: 1rem;
+}
+
+.h-line{
+    width: 50%;
+    height: 1px;
+    background-color: var(--block);
+}
+>>>>>>> 275342ba9ccaf89faed02a93fa3d5e80bf746685
