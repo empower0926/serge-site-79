@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import BankAdd1 from '../models/bank_acc/bank_add_1'
 import BankAdd2 from '../models/bank_acc/bank_add_2'
 import BankAdd3 from '../models/bank_acc/bank_add_3'
+import CardLink1 from '../models/card/card_link_1'
+import CardLink2 from '../models/card/card_link_2'
+
 
 
 class BuySell extends Component {
@@ -9,29 +12,30 @@ class BuySell extends Component {
     constructor(props) {
         super(props);
         this.state={
-            value: <BankAdd1 update={() => this.CardChange("1")}/>,
+            value: <BankAdd1 update={() => this.BankChange("1")}/>,
             Cardclass:"",
             Bankclass:""
         }
     }
-    CardChange (para){
-      
+    BankChange (para){
         if(para==="1"){
-            this.setState({ value: <BankAdd2 update={() => this.CardChange("2")} />});
+            this.setState({ value: <BankAdd2 update={() => this.BankChange("2")} />});
         }else if(para==="2"){
             this.setState({ value: <BankAdd3  />});
         }
-       
-        
-
+    }
+    CardChange (para){
+        if(para==="1"){
+            this.setState({ value: <CardLink2 update={() => this.BankChange("2")} />});
+        }
     }
 Chnge(para) {
 if(para==="Card"){
-    this.setState({ value: <BankAdd1 update={() => this.CardChange("1")}/> });
+    this.setState({ value: <CardLink1 update={() => this.CardChange("1")}/> });
     this.setState({ Cardclass: "" });
     this.setState({ Bankclass: "" });
 }else{
-    this.setState({ value: <BankAdd1 update={() => this.CardChange("1")} />});
+    this.setState({ value: <BankAdd1 update={() => this.BankChange("1")} />});
     this.setState({ Cardclass: "" });
     this.setState({ Bankclass: "" });
 }
