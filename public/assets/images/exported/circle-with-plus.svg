@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.8" height="16.8" viewBox="0 0 16.8 16.8">
+  <g id="circle-with-plus" transform="translate(-0.6 -0.6)">
+    <path id="Shape" d="M8.4,16.8a8.4,8.4,0,1,1,8.4-8.4A8.41,8.41,0,0,1,8.4,16.8Zm-5-9.4v2h4v4h2v-4h4v-2h-4v-4h-2v4Z" transform="translate(0.6 0.6)" fill="#fff"/>
+  </g>
+</svg>
