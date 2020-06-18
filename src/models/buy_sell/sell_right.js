@@ -1,5 +1,11 @@
-<div class="col-xl-1"></div>
-<div class="col-xl-5 mt-5">
+import React, { Component } from 'react';
+
+class SellRight extends Component {
+    state = {  }
+    render() { 
+        return ( 
+            
+<div data-aos="fade-up" class="col-xl-5 mt-5">
     <div class="row">
         <div class="col-xl-12 d-flex justify-content-center">
             <span class="heading">YOU ARE BUYING</span>
@@ -14,11 +20,11 @@
         </div>
 
 
-        <!-- summery -->
+       {/*  <!-- summery --> */}
         <div class="col-xl-12 mt-5">
             <div class="row">
                 <div class="col-xl-2 mb-4">
-                    <img class="wallet" src="../assets/images/exported/bit.svg" alt="">
+                    <img class="wallet" src="../assets/images/exported/bit.svg" alt=""/>
                 </div>
 
                 <div class="col-xl-8">
@@ -38,7 +44,7 @@
 
             <div class="row mt-4">
                 <div class="col-xl-2 mt-2 mb-2">
-                    <img class="wallet" src="../assets/images/exported/wallet.svg" alt="">
+                    <img class="wallet" src="../assets/images/exported/wallet.svg" alt=""/>
                 </div>
 
                 <div class="col-xl-8 mt-1">
@@ -48,7 +54,7 @@
             </div>
 
 
-            <!-- bottom-box -->
+            {/* <!-- bottom-box --> */}
             <div class="row mt-5">
                 <div class="col-xl-12">
                     <div class="summery">
@@ -78,3 +84,9 @@
 
     </div>
 </div>
+        
+       );
+    }
+}
+ 
+export default SellRight;

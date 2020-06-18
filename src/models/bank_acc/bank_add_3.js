@@ -9,7 +9,7 @@ class BANK_ADD_3 extends Component {
         <div class="col-xl-2"></div>
         <div class="col-xl-8">
             <div class="bank-form">
-                <form action="">
+                <form onSubmit={this.props.toBuysell}  action="">
 
                     <div class="mt-4">
                         <span>REFERENCE NUMBER</span>
@@ -64,7 +64,7 @@ class BANK_ADD_3 extends Component {
 
 
 
-                    <button onClick={this.props.update} class="buy-sell-btn mt-5">Continue</button>
+                    <button class="buy-sell-btn mt-5">Continue</button>
                 </form>
             </div>
         </div>

@@ -9,7 +9,8 @@ import Transactions from './transactions'
 import News from './news'
 import Profile from './profile'
 import WallertAddCard from '../models/Wallet/wallet_add_card'
-import BuySell from './pymentmethod'
+import Pymentmethod from './pymentmethod'
+import BuySell from './buysell'
 import {Link} from 'react-scroll'
 
 
@@ -17,22 +18,22 @@ class main extends Component {
     
     constructor(props) {
         super(props);
-        
+       
       if(this.state===undefined){
         this.state={
-            value: <Dashboard update={this.ToBuySell}/> ,
+            value: <Dashboard update={this.ToPymentmethod}/> ,
                 heading:"Dashboard"
         }
       }else{
         if(this.getData()===null){
             this.state={
-                value: <Dashboard update={this.ToBuySell}/> ,
+                value: <Dashboard update={this.ToPymentmethod}/> ,
                     heading:"Dashboard"
             }
         }else{
             if ("dashboard" === this.getData()) {
                 this.state={
-                    value: <Dashboard update={this.ToBuySell}/> ,
+                    value: <Dashboard update={this.ToPymentmethod}/> ,
                         heading:"Dashboard"
                 }
             } else if ("markets" === this.getData()) {
@@ -98,26 +99,31 @@ class main extends Component {
          this.setState({ heading:"Wallets" });
     
     }
-    BackfromBuysell = () => {
-        this.setState({ value: <Dashboard update={this.ToBuySell}/> });
+    BackfromPymentmethod = () => {
+        this.setState({ value: <Dashboard update={this.ToPymentmethod}/> });
             this.setState({ heading:"Dashboard" });
     
     }
+    
     ChangefromTrading = () => {
         this.setState({ value: <Trading /> });
         this.setState({ heading:"Trading" });
         
 
     }
-    ToBuySell = () => {
-        this.setState({ value: <BuySell update={this.BackfromBuysell}/> });
+    ToBuysell=()=>{
+        this.setState({ value: <BuySell update={this.BackfromPymentmethod}/> });
+        this.setState({ heading:"Dashboard" });
+    }
+    ToPymentmethod = () => {
+        this.setState({ value: <Pymentmethod update={this.BackfromPymentmethod} toBuysell={this.ToBuysell}/> });
         this.setState({ heading:"Dashboard" });
     }
     
     handledivChange = (event) => {
         this.setData(event.target.name);
         if ("dashboard" === event.target.name) {
-            this.setState({ value: <Dashboard update={this.ToBuySell}/> });
+            this.setState({ value: <Dashboard update={this.ToPymentmethod}/> });
             this.setState({ heading:"Dashboard" });
         } else if ("markets" === event.target.name) {
             this.setState({ value: <Markets update={this.ChangefromTrading} /> });

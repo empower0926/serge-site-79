@@ -9,6 +9,7 @@ import CardSuccess from '../models/card/card_success'
 
 
 
+
 class BuySell extends Component {
 
     constructor(props) {
@@ -23,8 +24,10 @@ class BuySell extends Component {
         if(para==="1"){
             this.setState({ value: <BankAdd2 update={() => this.BankChange("2")} />});
         }else if(para==="2"){
-            this.setState({ value: <BankAdd3  />});
+            this.setState({ value: <BankAdd3   toBuysell={this.props.toBuysell}/>});
+           
         }
+        
     }
     CardChange (para){
         if(para==="1"){

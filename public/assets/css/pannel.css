@@ -1039,9 +1039,9 @@ a:hover{
 .refer-check{
     width: 24px !important;
 }
+
 /* card */
 
->>>>>>> 275342ba9ccaf89faed02a93fa3d5e80bf746685
 .card-succes{
     text-align: center;
 }
@@ -1050,8 +1050,6 @@ a:hover{
     width: 70%;
     font-size: 2rem;
 }
-<<<<<<< HEAD
-=======
 
 
 /* buy -sell pannel */
@@ -1092,4 +1090,3 @@ a:hover{
     height: 1px;
     background-color: var(--block);
 }
->>>>>>> 275342ba9ccaf89faed02a93fa3d5e80bf746685
