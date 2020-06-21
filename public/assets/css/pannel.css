@@ -164,7 +164,6 @@ a:hover{
     background: none;
     border: 1px solid var(--main-color);
     color: white;
-    margin-top: 1rem;
     border-radius: 25px;
     padding: 0 1rem;
 }
@@ -235,7 +234,8 @@ a:hover{
 }
 
 .send-to {
-    padding-left: 2rem !important;
+    width: 75%;
+    height: 24px;
 }
 
 .send input, .send select {

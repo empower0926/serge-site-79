@@ -24,11 +24,11 @@ class OZTGTile extends Component {
 
                 {/* <!-- buy and sell --> */}
                 <div className="row mt-4">
-                    <div className="col-xl-8 mt-5">
-                        <span id="value" className="value">2.7995 EUR</span> <span id="percentage"
-                            className="percentage">+12</span>
+                    <div className="col-xl-8 d-flex mb-2">
+                        <span id="value" className="value my-auto">2.7995 EUR</span> <span id="percentage"
+                            className="percentage my-auto">+12</span>
                     </div>
-                    <div className="col-xl-4 mt-3">
+                    <div className="col-xl-4">
                         <button id="buy-sell" className="outile-btn" onClick={() => this.props.update()}>buy/sell</button>
                     </div>
                 </div>

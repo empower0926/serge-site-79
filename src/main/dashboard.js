@@ -4,44 +4,47 @@ import ETHTile from '../models/Tiles/ETHTile'
 import LTCTile from '../models/Tiles/LTCTile'
 import BTCTile from '../models/Tiles/BTCTIle'
 import CurrencyChart from '../models/Currency/currency_chart'
+
+
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-    this.state = { data: <OZTGTile update={this.props.update}/> ,chart:<CurrencyChart title={"OZTG"}/> ,
-    OZTGTileclass:"tile card-select",
-    ETHTileclass :"tile",
-    LTCTileclass :"tile",
-    BTCTileclass :"tile"
-}
+        this.state = {
+            data: <OZTGTile update={this.props.update} />, chart: <CurrencyChart title={"OZTG"} />,
+            OZTGTileclass: "tile card-select",
+            ETHTileclass: "tile",
+            LTCTileclass: "tile",
+            BTCTileclass: "tile"
+        }
     }
     RemoveselectAllTile = () => {
-        this.setState({ OZTGTileclass:"tile"});  
-        this.setState({ ETHTileclass:"tile"});
-        this.setState({ LTCTileclass:"tile"});
-        this.setState({ BTCTileclass:"tile"});
+        this.setState({ OZTGTileclass: "tile" });
+        this.setState({ ETHTileclass: "tile" });
+        this.setState({ LTCTileclass: "tile" });
+        this.setState({ BTCTileclass: "tile" });
     }
-   
+
     handleClick(letter) {
-        
+
         if ("OZTG" === letter) {
-            this.setState({ data: <OZTGTile update={this.props.update}/> ,chart:<CurrencyChart title={"OZTG"}/>});
+            this.setState({ data: <OZTGTile update={this.props.update} />, chart: <CurrencyChart title={"OZTG"} /> });
             this.RemoveselectAllTile();
-            this.setState({ OZTGTileclass:"tile card-select"});  
+            this.setState({ OZTGTileclass: "tile card-select" });
         } else if ("ETH" === letter) {
-            this.setState({ data: <ETHTile update={this.props.update}/> ,chart:<CurrencyChart title={"ETH"}/>});
+            this.setState({ data: <ETHTile update={this.props.update} />, chart: <CurrencyChart title={"ETH"} /> });
             this.RemoveselectAllTile();
-            this.setState({ ETHTileclass:"tile card-select"});
-        }  else if ("LTC" === letter) {
-            this.setState({ data: <LTCTile update={this.props.update}/> ,chart:<CurrencyChart title={"LTC"}/>});
+            this.setState({ ETHTileclass: "tile card-select" });
+        } else if ("LTC" === letter) {
+            this.setState({ data: <LTCTile update={this.props.update} />, chart: <CurrencyChart title={"LTC"} /> });
             this.RemoveselectAllTile();
-            this.setState({ LTCTileclass:"tile card-select"});
-        }else if ("BTC" === letter) {
-            this.setState({ data: <BTCTile update={this.props.update}/> ,chart:<CurrencyChart title={"BTC"}/>}); 
-            this.RemoveselectAllTile(); 
-            this.setState({ BTCTileclass:"tile card-select"});  
+            this.setState({ LTCTileclass: "tile card-select" });
+        } else if ("BTC" === letter) {
+            this.setState({ data: <BTCTile update={this.props.update} />, chart: <CurrencyChart title={"BTC"} /> });
+            this.RemoveselectAllTile();
+            this.setState({ BTCTileclass: "tile card-select" });
         }
-      }
-      
+    }
+
     render() {
         return (
             <div>
@@ -53,8 +56,8 @@ class Dashboard extends Component {
                             <div className="row">
                                 {/*  <!-- current balance --> */}
                                 <div className="tile-parent col-xl-4">
-                                {this.state.data}
-                                    </div>
+                                    {this.state.data}
+                                </div>
 
                                 {/*  <!-- stats --> */}
                                 <div className="col-xl-8">
@@ -62,13 +65,13 @@ class Dashboard extends Component {
 
                                     {/*  <!-- currency --> */}
                                     <div className="row">
-                                    
-                                        <div name="OZTG" onClick={() => this.handleClick("OZTG")}  data-aos="fade-up" data-aos-delay="50" className="tile-parent col-xl-3">
-                                            <div  className={this.state.OZTGTileclass} >
+
+                                        <div name="OZTG" onClick={() => this.handleClick("OZTG")} data-aos="fade-up" data-aos-delay="50" className="tile-parent col-xl-3">
+                                            <div className={this.state.OZTGTileclass} >
                                                 <div className="row">
                                                     <div className="col-xl-12">
                                                         <span id="c-name" className="c-name">OZTG</span>
-                                                        <span className="c-badge"><img   src="../assets/images/exported/currencies/OZTG.svg"
+                                                        <span className="c-badge"><img src="../assets/images/exported/currencies/OZTG.svg"
                                                             alt="OZTG" /></span>
                                                     </div>
                                                     <div className="col-xl-12 mt-3">
@@ -79,7 +82,7 @@ class Dashboard extends Component {
                                             </div>
                                         </div>
 
-                                        <div name="ETH"onClick={() => this.handleClick("ETH")} data-aos="fade-up" data-aos-delay="100" className="tile-parent col-xl-3">
+                                        <div name="ETH" onClick={() => this.handleClick("ETH")} data-aos="fade-up" data-aos-delay="100" className="tile-parent col-xl-3">
                                             <div className={this.state.ETHTileclass}>
                                                 <div className="row">
                                                     <div className="col-xl-12">
@@ -94,7 +97,7 @@ class Dashboard extends Component {
                                             </div>
                                         </div>
 
-                                        <div name="LTC"onClick={() => this.handleClick("LTC")} data-aos="fade-up" data-aos-delay="150" className="tile-parent col-xl-3">
+                                        <div name="LTC" onClick={() => this.handleClick("LTC")} data-aos="fade-up" data-aos-delay="150" className="tile-parent col-xl-3">
                                             <div className={this.state.LTCTileclass}>
                                                 <div className="row">
                                                     <div className="col-xl-12">
@@ -109,7 +112,7 @@ class Dashboard extends Component {
                                             </div>
                                         </div>
 
-                                        <div name="BTC"onClick={() => this.handleClick("BTC")} data-aos="fade-up" data-aos-delay="200" className="tile-parent col-xl-3">
+                                        <div name="BTC" onClick={() => this.handleClick("BTC")} data-aos="fade-up" data-aos-delay="200" className="tile-parent col-xl-3">
                                             <div className={this.state.BTCTileclass}>
                                                 <div className="row">
                                                     <div className="col-xl-12">
@@ -132,8 +135,10 @@ class Dashboard extends Component {
 
                                                 {/*  <!-- availability --> */}
                                                 <div className="availability row mt-3">
-                                                    <div><img src="../assets/images//exported/mocks/Group 1.svg" alt="" /></div>
-                                                    <div className="stat-item stat-value">81</div>
+
+                                                    <div id="progress1" class="progress-circle"></div>
+
+                                                    <div className="stat-item stat-value">50</div>
                                                     <div className="stat-item">OZTG</div>
                                                     <a className="more" href="/">
                                                         <img src="../assets/images/exported/3-dot.svg" alt="more" />
@@ -142,8 +147,8 @@ class Dashboard extends Component {
 
                                                 {/* <!-- availability --> */}
                                                 <div className="availability row mt-4">
-                                                    <div><img src="../assets/images//exported/mocks/Group 1.svg" alt="" /></div>
-                                                    <div className="stat-item stat-value">81</div>
+                                                <div id="progress2" class="progress-circle"></div>
+                                                    <div className="stat-item stat-value">87</div>
                                                     <div className="stat-item">OZTG</div>
                                                     <a className="more" href="/">
                                                         <img src="../assets/images/exported/3-dot.svg" alt="more" />
@@ -153,8 +158,8 @@ class Dashboard extends Component {
 
                                                 {/*  <!-- availability --> */}
                                                 <div className="availability row mt-4">
-                                                    <div><img src="../assets/images//exported/mocks/Group 1.svg" alt="" /></div>
-                                                    <div className="stat-item stat-value">81</div>
+                                                <div id="progress3" class="progress-circle"></div>
+                                                    <div className="stat-item stat-value">32</div>
                                                     <div className="stat-item">OZTG</div>
                                                     <a className="more" href="/">
                                                         <img src="../assets/images/exported/3-dot.svg" alt="more" />
@@ -198,7 +203,7 @@ class Dashboard extends Component {
                             {/* <!-- third line --> */}
                             <div className="row">
                                 <div data-aos="fade-up" data-aos-delay="350" className="tile-parent col-xl-8">
-                                {this.state.chart}
+                                    {this.state.chart}
                                 </div>
 
                                 <div data-aos="fade-up" data-aos-delay="400" className="tile-parent col-xl-4">
@@ -384,6 +389,50 @@ class Dashboard extends Component {
                 </div>
             </div>
         );
+    }
+
+    componentDidMount(){
+        var ProgressBar = require('progressbar.js')
+
+        var progress1 = document.getElementById('progress1');
+        var progress2 = document.getElementById('progress2');
+        var progress3 = document.getElementById('progress3');
+
+        var bar1 = new ProgressBar.Circle(progress1, {
+            strokeWidth: 6,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#B158E2',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: null
+          });
+
+          var bar2 = new ProgressBar.Circle(progress2, {
+            strokeWidth: 6,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#B158E2',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: null
+          });
+
+          var bar3 = new ProgressBar.Circle(progress3, {
+            strokeWidth: 6,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#B158E2',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: null
+          });
+          
+
+        //   100% = 1
+          bar1.animate(0.5);  
+          bar2.animate(0.87); 
+          bar3.animate(0.32);  
     }
 }
 
