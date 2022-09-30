@@ -3,7 +3,7 @@ name: Generate a build and push to dg branch
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
